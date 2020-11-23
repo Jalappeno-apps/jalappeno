@@ -1,0 +1,13 @@
+en:
+  navbar:
+    about_us: About Us
+    team: Team
+    clients: Clients
+    blog: Blog
+    contact: Contact
+  footer:
+    design: Design
+    development: Development
+    projects: Projects
+    company: Company
+    contact: Contact

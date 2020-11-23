@@ -1,0 +1,21 @@
+footer {
+  cursor: auto !important;
+}
+
+.footer__link {
+  margin-bottom: 0.8rem;
+
+  a {
+    color: #4a4a4a;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary !important;
+      cursor: pointer !important;      
+    }
+  }
+}
+
+.footer__subtitle {
+  font-weight: bold
+}

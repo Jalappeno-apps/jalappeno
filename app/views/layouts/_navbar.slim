@@ -1,0 +1,23 @@
+nav.navbar.is-fixed-top role="navigation" aria-label="main navigation"
+  .navbar-brand
+    a.navbar-item href="/"
+      = image_tag "logo"
+
+    a.navbar-burger.burger role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+      span aria-hidden="true"
+      span aria-hidden="true"
+      span aria-hidden="true"
+
+  .navbar-menu
+    .navbar-star
+
+    .navbar-end
+      a.navbar-item = t('navbar.about_us')
+      a.navbar-item = t('navbar.team')
+      a.navbar-item = t('navbar.clients')
+      a.navbar-item = t('navbar.blog')
+
+      .navbar-item
+        .buttons
+          a.button.is-primary
+            strong = t('navbar.contact')

@@ -1,0 +1,16 @@
+.navbar-item img {
+  max-width: initial;
+  max-height: initial;
+}
+
+@include desktop {
+  .navbar-end {
+    justify-content: space-between;
+    margin-left: auto;
+    width: 50%;
+
+    &-scrolled {
+      width: initial;
+    }
+  }
+}

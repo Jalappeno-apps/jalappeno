@@ -1,0 +1,21 @@
+.is-centered-middle {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.is-flex-column {
+  flex-direction: column;
+}
+
+.is-flex-row {
+  flex-direction: row;
+}
+
+
+@include touch {
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}

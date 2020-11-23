@@ -1,0 +1,10 @@
+.button-outline {
+  background-color: transparent !important;
+  border-color: $primary !important;
+  color: rgba(0, 0, 0, 0.7);
+
+  &:hover {
+    background-color: $primary !important;
+    color: $jalappeno-white !important;
+  }
+}

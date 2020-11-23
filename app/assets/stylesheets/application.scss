@@ -1,0 +1,150 @@
+@import "./colors";
+
+@import "bulma/bulma";
+@import "navbar";
+// @import "modals";
+
+@import "./font";
+@import "./typography";
+@import "./utils";
+@import "./basics";
+@import "./buttons";
+@import "./flexbox";
+@import "./cursor";
+@import "./footer";
+
+body {
+  background: $primarybackground;
+  font-family: $text-display;
+}
+
+.chilli__background {
+  position: absolute;
+
+  .chilli {
+    overflow-x: hidden !important;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    &--first {
+      background: asset-url('chilli-1') no-repeat center center;
+      z-index: 1;
+    }
+
+    &--second {
+      background: asset-url('chilli-2') no-repeat center center;
+      z-index: 2;
+    }
+    &--third {
+      background: asset-url('chilli-3') no-repeat center center;
+      z-index: 3;
+    }
+    &--fourth {
+      background: asset-url('chilli-4') no-repeat center center;
+      z-index: 4;
+    }
+    &--fifth {
+      background: asset-url('chilli-5') no-repeat center center;
+      z-index: 5;
+    }
+  }
+}
+
+.work {
+  z-index: 6;
+  @extend .is-centered-middle;
+
+  .work__section {
+    &__inside {
+      min-height: 70vh;
+    }
+  }
+}
+
+.hero {
+  @extend .is-fullheight;
+  @extend .is-centered-middle;
+  margin-top: -3.25rem !important;
+  z-index: 6;
+  overflow: hidden !important;
+
+  .hero__box { 
+    @extend .is-fullheight;
+  }
+
+  .hero__button {
+    @extend .is-fullwidth;
+    @extend .is-centered-middle;
+  }
+}
+
+.step__text {
+  .step__number {
+    color: map-get($jalappeno, 'green-150') !important;
+    font-weight: bold;
+  }
+  .step__title {
+    color: map-get($jalappeno, 'green-100') !important;
+  }
+}
+
+@include touch {
+  .no-mob-br {
+    display: none !important;
+  }
+
+  .touch-disable {
+    display: none !important;
+  }
+}
+
+.singular {
+  transition: 500ms;
+
+  &:hover {
+    transition: 500ms;
+    transform: scale(1.1);
+    border: 1px solid map-get($jalappeno, 'green-140') !important;
+    cursor: asset-url('cursor-hover.svg'), auto;
+  }
+}
+
+.button:hover{
+    transition: 500ms;
+    text-decoration: none;
+    cursor: asset-url('cursor-hover.svg'), auto;
+    background-color: initial;
+}
+
+
+a:hover{
+    transition: 500ms;
+    text-decoration: none;
+    cursor: asset-url('cursor-hover.svg'), auto;
+    background-color: initial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
