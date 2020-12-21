@@ -1,4 +1,4 @@
-nav.navbar.is-fixed-top role="navigation" aria-label="main navigation"
+nav.container-fluid.navbar.is-fixed-top.p-5 role="navigation" aria-label="main navigation"
   .navbar-brand
     a.navbar-item href="/"
       = image_tag "logo"
@@ -19,5 +19,4 @@ nav.navbar.is-fixed-top role="navigation" aria-label="main navigation"
 
       .navbar-item
         .buttons
-          a.button.is-primary
-            strong = t('navbar.contact')
+          a.button.is-primary = t('navbar.contact')

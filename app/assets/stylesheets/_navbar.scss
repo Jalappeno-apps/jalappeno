@@ -14,3 +14,15 @@
     }
   }
 }
+
+nav, .navbar {
+  background: transparent;
+  background-color: transparent;
+  transition: all 500ms;
+}
+
+.white__nav {
+  background: white;
+  background-color: white;
+  transition: all 500ms;
+}

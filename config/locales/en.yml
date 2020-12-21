@@ -1,10 +1,10 @@
 en:
   navbar:
-    about_us: About Us
-    team: Team
-    clients: Clients
-    blog: Blog
-    contact: Contact
+    about_us: about us
+    team: team
+    clients: clients
+    blog: blog
+    contact: contact
   footer:
     design: Design
     development: Development

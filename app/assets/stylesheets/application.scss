@@ -16,6 +16,7 @@
 body {
   background: $primarybackground;
   font-family: $text-display;
+  overflow-x: none;
 }
 
 .chilli__background {
@@ -85,11 +86,12 @@ body {
 
 .step__text {
   .step__number {
-    color: map-get($jalappeno, 'green-150') !important;
+    color: map-get($jalappeno, 'green-150');
     font-weight: bold;
   }
   .step__title {
-    color: map-get($jalappeno, 'green-100') !important;
+    line-height: 2;
+    color: map-get($jalappeno, 'green-100');
   }
 }
 
@@ -115,31 +117,48 @@ body {
 }
 
 .button:hover{
-    transition: 500ms;
-    text-decoration: none;
-    cursor: asset-url('cursor-hover.svg'), auto;
-    background-color: initial;
+  transition: 500ms;
+  text-decoration: none;
+  cursor: asset-url('cursor-hover.svg'), auto;
+  background-color: initial;
 }
 
 
 a:hover{
-    transition: 500ms;
-    text-decoration: none;
-    cursor: asset-url('cursor-hover.svg'), auto;
-    background-color: initial;
+  transition: 500ms;
+  text-decoration: none;
+  cursor: asset-url('cursor-hover.svg'), auto;
+  background-color: initial;
 }
 
+.contact {
 
+}
 
+.has-bg-green-100 {
+  transition: all 1s ease;
+}
 
+.has-text-on-bg-green-100 {
+  color: white;
+}
 
+.text-styles-on-bg-change {
+  color: $jalappeno-gray !important;
+  font-weight: bold;
+}
 
+.image_container {
+  visibility:visible;
+  opacity:1;
+  transition: visibility 500ms linear,opacity 500ms linear;
+}
 
-
-
-
-
-
+.image_container_invisble {
+  visibility: hidden;
+  opacity:0;
+  transition: visibility 500ms linear,opacity 500ms linear;
+}
 
 
 

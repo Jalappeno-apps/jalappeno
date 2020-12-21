@@ -1,4 +1,5 @@
-$jalappeno-white: #fff;
+$jalappeno-white: #fafafa;
+$jalappeno-gray: #4a4a4a;
 
 $jalappeno: (
   "gray-10": #f6f6f6,
@@ -269,7 +270,7 @@ $danger: map-get($jalappeno, 'red-80');
 @each $color in gray, lilac, red, peach, tangerine, yellow, green, blue, brown, purple {
   @for $i from 1 through 15 {
     .is-#{"" + $color}-#{$i * 10} {
-      color: map-get($jalappeno, $color + '-#{$i * 10}') !important;
+      color: map-get($jalappeno, $color + '-#{$i * 10}');
     }
 
     .is-#{"" + $color}-pop-#{$i * 10} {

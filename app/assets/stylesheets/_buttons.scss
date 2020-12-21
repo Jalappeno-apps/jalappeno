@@ -8,3 +8,13 @@
     color: $jalappeno-white !important;
   }
 }
+
+.button.is-primary {
+  color: $jalappeno-white !important;
+}
+
+.button.is-primary:hover {
+  color: $jalappeno-gray !important;
+  background-color: transparent !important;
+  border: 1px solid $primary;
+}

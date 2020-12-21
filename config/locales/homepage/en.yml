@@ -2,10 +2,11 @@ en:
   homepage:
     hero:
       tagline: the most <span class='is-green-80'>customer oriented</span><br class='no-mob-br'/>digital agency in the world
-      subtitle: our mission is to bring you success through our digital solutions
-      book_meeting: Book online meeting
+      subtitle: our mission is to bring you success through digital solutions.
+      book_meeting: book online meeting
     work:
       how: How we work?
+      subtitle: our mission is to bring you success through digital solutions.
       step_1:
         step: Step 1
         meeting: Online Meeting
@@ -33,5 +34,7 @@ en:
         step: Step 4
         content:
           p1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum lectus ante tellus cursus. Fermentum elementum gravida sed id egestas. Eget tincidunt tincidunt cursus morbi pellentesque pulvinar. Interdum massa malesuada sit enim sed orci, dis erat venenatis.
+    clients:
+      opinion: Client's opinion 
     projects:
       our_projects: Our projects
