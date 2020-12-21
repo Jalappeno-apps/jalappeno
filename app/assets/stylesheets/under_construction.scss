@@ -1,0 +1,31 @@
+.under-construction {
+    &__contact {
+        border-radius: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+        &:hover {
+            strong {
+                color: $primary !important;
+            }
+        }
+    }
+
+    h3 {
+        line-height: 43px;
+    }
+
+    figure {
+        img {
+            width: 180px;
+            height: 180px;
+        }
+    }
+    
+    .person {
+        border: 15px solid $primary;
+    }
+}
+
+.under-construction.hero {
+    padding-top: 6rem !important; 
+}
