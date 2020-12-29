@@ -1,5 +1,9 @@
 footer {
   cursor: auto !important;
+
+  .button {
+    border: none;
+  }
 }
 
 .footer__link {
@@ -14,8 +18,4 @@ footer {
       cursor: pointer !important;      
     }
   }
-}
-
-.footer__subtitle {
-  font-weight: bold
 }

@@ -94,6 +94,10 @@ body {
   .step__title {
     line-height: 2;
     color: map-get($jalappeno, 'green-100');
+    font-weight: 600;
+  }
+  .step__content {
+    color: #292929;
   }
 }
 
@@ -133,8 +137,46 @@ a:hover{
   background-color: initial;
 }
 
-.contact {
+#contact,
+#development,
+#clients_opinion,
+#projects {
+  h1 {
+    @extend .is-green-80;
+  }
+}
 
+#how-we-work {
+  h2 {
+    @extend .is-green-80;
+  }
+}
+
+.contact {
+  .input,
+  .textarea {
+    border: 0;
+    border-bottom: 1px solid #767676;
+    border-radius: 0;
+    background: $jalappeno-white;
+    box-shadow: none;
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #767676 !important;
+      opacity: 1 !important; /* Firefox */
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #767676 !important;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: #767676 !important;
+    }
+  }
+  
+  .person {
+    border: 15px solid $primary;
+  }
 }
 
 .has-bg-green-100 {

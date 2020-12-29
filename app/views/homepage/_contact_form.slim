@@ -1,9 +1,40 @@
-section.contact.mt-5 id="contact"
-  .columns
-    .column style="background: green"
-      h1 sdf
-    .column
-      h1 safn
+section.contact.mt-6 id="contact"
+  h1.title.has-text-centered.mb-6 contact us with NDA
+  .container
+    .columns
+      .column
+        .columns
+          .column.is-flex.is-justify-content-center
+            figure.image
+              = image_tag 'daiji.png', class: 'person is-rounded'
+          .column
+            h2.is-size-4.mb-4
+              | Daiji Kimura
+            p.mb-1
+              | CEO & Product Owner
+            p.mb-1
+              | +48 693-896-717
+            p.mb-1
+              daiji.kimura@jalappeno.pl
+        .columns
+          .column
+            p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, customer centricity, passion for innovations and long therm vision - you can be sure, that we are the right partners for your exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
+      .column
+        input.mb-3.input[type="text" placeholder="Full name"]
+        input.mb-3.input[type="email" placeholder="Email"]
+        input.mb-3.input[type="tel" placeholder="Phone"]
+        textarea.mb-3.textarea[placeholder="Message"]
+        label.checkbox
+          input[type="checkbox"]
+          |  I need 
+          span.is-green-80.is-bold
+            | NDA
+          |  first
+        label.checkbox
+          input[type="checkbox"]
+          |  I agree to the processing of personal data provided according to 
+          span.is-green-80.is-bold
+            | Privacy Policy
 
 
 .container
