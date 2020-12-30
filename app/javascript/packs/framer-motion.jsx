@@ -10,6 +10,7 @@ import image_1 from "../../assets/images/image_1";
 import image_2 from "../../assets/images/image_2";
 import image_3 from "../../assets/images/image_3";
 import image_4 from "../../assets/images/image_4";
+import image_5 from "../../assets/images/image_5";
 
 const Container = styled(motion.div)`
   position: absolute;
@@ -66,6 +67,9 @@ export default class MyComponent extends Component {
       document.querySelectorAll(".step__title").forEach( x => {
         x.classList.add("text-styles-on-bg-change");
       });
+      document.querySelectorAll(".step__content").forEach( x => {
+        x.classList.add("text-styles-on-bg-change");
+      });
       document.querySelectorAll(".is-green-80").forEach( x => {
         x.classList.add("text-styles-on-bg-change");
       });
@@ -74,6 +78,9 @@ export default class MyComponent extends Component {
       this.onScroll(1, image_1);
       document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
       document.querySelectorAll(".step__title").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
+      document.querySelectorAll(".step__content").forEach( x => {
         x.classList.remove("text-styles-on-bg-change");
       });
       document.querySelectorAll(".is-green-80").forEach( x => {
@@ -87,6 +94,9 @@ export default class MyComponent extends Component {
       document.querySelectorAll(".step__title").forEach( x => {
         x.classList.remove("text-styles-on-bg-change");
       });
+      document.querySelectorAll(".step__content").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
       document.querySelectorAll(".is-green-80").forEach( x => {
         x.classList.remove("text-styles-on-bg-change");
       });
@@ -95,6 +105,9 @@ export default class MyComponent extends Component {
       this.onScroll(0, image_2);
       document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
       document.querySelectorAll(".step__title").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
+      document.querySelectorAll(".step__content").forEach( x => {
         x.classList.remove("text-styles-on-bg-change");
       });
       document.querySelectorAll(".is-green-80").forEach( x => {
@@ -106,6 +119,9 @@ export default class MyComponent extends Component {
       this.onScroll(0, image_4);
       document.body.classList.add("has-bg-green-90", "has-text-on-bg-green-90");
       document.querySelectorAll(".step__title").forEach( x => {
+        x.classList.add("text-styles-on-bg-change");
+      });
+      document.querySelectorAll(".step__content").forEach( x => {
         x.classList.add("text-styles-on-bg-change");
       });
       document.querySelectorAll(".is-green-80").forEach( x => {
@@ -120,14 +136,35 @@ export default class MyComponent extends Component {
       document.querySelectorAll(".step__title").forEach( x => {
         x.classList.remove("text-styles-on-bg-change");
       });
+      document.querySelectorAll(".step__content").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
+      document.querySelectorAll(".is-green-80").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
+    } )
+
+    fifth_section.on("start enter", (event) => {
+      this.onScroll(1, image_5);
+      document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
+      document.querySelectorAll(".step__title").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
+      document.querySelectorAll(".step__content").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
       document.querySelectorAll(".is-green-80").forEach( x => {
         x.classList.remove("text-styles-on-bg-change");
       });
     } )
 
     fifth_section.on("end leave", (event) => {
+      this.onScroll(0, image_4);
       document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
       document.querySelectorAll(".step__title").forEach( x => {
+        x.classList.remove("text-styles-on-bg-change");
+      });
+      document.querySelectorAll(".step__content").forEach( x => {
         x.classList.remove("text-styles-on-bg-change");
       });
       document.querySelectorAll(".is-green-80").forEach( x => {
