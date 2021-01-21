@@ -111,6 +111,25 @@ body {
   }
 }
 
+@include desktop {
+  .tile.is-child.mr-15-desktop {
+    margin-right: 1.5rem !important;
+  }
+}
+
+@include mobile {
+  .tile.is-child.mb-15-mobile {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.projects__section {
+  img {
+    mix-blend-mode: luminosity;
+    filter: contrast(90%);
+  }
+}
+
 .singular {
   transition: 500ms;
 
