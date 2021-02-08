@@ -1,5 +1,19 @@
 footer {
   cursor: auto !important;
+
+  .button {
+    border: none;
+  }
+
+  @include mobile {
+    background-color: rgba(75, 239, 157, 0.05);
+    .column {
+      h1 {
+        font-weight: 600;
+      }
+    }
+  }
+
 }
 
 .footer__link {
@@ -14,8 +28,4 @@ footer {
       cursor: pointer !important;      
     }
   }
-}
-
-.footer__subtitle {
-  font-weight: bold
 }

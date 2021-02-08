@@ -6,3 +6,10 @@ pl:
       book_meeting: Book online meeting
     work:
       how: How we work?
+    project:
+      healthcare_clinic: Redesign for healthcare clinic
+      cbd_manufacturer: E-commerce for CBD manufacturer
+      glamping_business: Booking web app for Glamping business
+      furniture_store: Custom e-commerce for a luxurious furniture store
+      dentist: Custom booking website for dentist
+      cosmetic_salon: Website for cosmetic salon chain in Poland

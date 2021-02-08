@@ -2,6 +2,7 @@
   background-color: transparent !important;
   border-color: $primary !important;
   color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
 
   &:hover {
     background-color: $primary !important;
@@ -11,6 +12,7 @@
 
 .button.is-primary {
   color: $jalappeno-white !important;
+  border-radius: 15px;
 }
 
 .button.is-primary:hover {

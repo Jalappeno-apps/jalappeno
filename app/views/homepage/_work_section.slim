@@ -2,9 +2,9 @@
 
 section.work.container id="how-we-work"
   .work__section
-    h2.is-size-4-touch.title.is-green-90.has-text-centered = t 'work.how', scope: i18n_scope
+    h2.is-size-4-touch.title.has-text-centered = t 'work.how', scope: i18n_scope
     h3.subtitle.has-text-centered.has-pt-5.has-mb-240 = t 'work.subtitle', scope: i18n_scope 
-    .work__section__inside
+    .work__section__inside.has-mb-180
       .columns.reverse-columns
         .column.is-three-fifths
           .step__image--first id="first_frame"
@@ -12,20 +12,20 @@ section.work.container id="how-we-work"
         .column.is-two-fifths
           .step__text
             .step__number.has-pb-18 = t 'work.step_1.step', scope: i18n_scope
-            .step__title.is-size-1.is-size-4-touch = t 'work.step_1.meeting', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch = t 'work.step_1.meeting', scope: i18n_scope
             .step__content.mt-5.spacer.s0 id="trigger1"
               p = t 'work.step_1.content.p1', scope: i18n_scope
               br
               p = t('work.step_1.content.p2', scope: i18n_scope).html_safe
-            .s0 id="trigger2"
+            .s0 id="trigger1"
 
 
-    .work__section__inside
+    .work__section__inside.has-mb-180
       .columns
         .column
           .step__text
             .step__number = t 'work.step_2.step', scope: i18n_scope
-            .step__title.is-size-1.is-size-4-touch.mt-5 = t 'work.step_2.design', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5 = t 'work.step_2.design', scope: i18n_scope
             .step__content.mt-5
               p = t 'work.step_2.content.p1', scope: i18n_scope
               .content
@@ -41,9 +41,9 @@ section.work.container id="how-we-work"
         .column
           .step__image--second
             = image_tag 'background'
-        .s0 id="trigger3"
+        .s0 id="trigger2"
 
-    .work__section__inside.spacer
+    .work__section__inside.spacer.has-mb-180
       .columns.reverse-columns
         .column
           .step__image--third
@@ -51,20 +51,33 @@ section.work.container id="how-we-work"
         .column
           .step__text
             .step__number = t 'work.step_3.step', scope: i18n_scope
-            .step__title.is-size-1.is-size-4-touch.mt-5 = t 'work.step_1.research', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5.is-lowercase = t 'work.step_3.research', scope: i18n_scope
             .step__content.mt-5
               p = t 'work.step_3.content.p1', scope: i18n_scope
-        .s0 id="trigger4"
+        .s0 id="trigger3"
 
-    .work__section__inside
+    .work__section__inside.has-mb-180
       .columns
         .column
           .step__text
             .step__number = t 'work.step_4.step', scope: i18n_scope
-            .step__title.is-size-1.is-size-4-touch.mt-5 = t 'work.step_2.design', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5 = t 'work.step_4.maintaince', scope: i18n_scope
             .step__content.mt-5
               p = t 'work.step_4.content.p1', scope: i18n_scope
         .column
           .step__image--second
             = image_tag 'background'
-          .s0 id="trigger5"
+        .s0 id="trigger4"
+
+    .work__section__inside.spacer.has-mb-180
+      .columns.reverse-columns
+        .column
+          .step__image--third
+            = image_tag 'background'
+        .column
+          .step__text
+            .step__number = t 'work.step_5.step', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5.is-lowercase = t 'work.step_5.marketing', scope: i18n_scope
+            .step__content.mt-5
+              p = t 'work.step_3.content.p1', scope: i18n_scope
+        .s0 id="trigger5"

@@ -94,6 +94,10 @@ body {
   .step__title {
     line-height: 2;
     color: map-get($jalappeno, 'green-100');
+    font-weight: 600;
+  }
+  .step__content {
+    color: #292929;
   }
 }
 
@@ -104,6 +108,25 @@ body {
 
   .touch-disable {
     display: none !important;
+  }
+}
+
+@include desktop {
+  .tile.is-child.mr-15-desktop {
+    margin-right: 1.5rem !important;
+  }
+}
+
+@include mobile {
+  .tile.is-child.mb-15-mobile {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.projects__section {
+  img {
+    mix-blend-mode: luminosity;
+    filter: contrast(90%);
   }
 }
 
@@ -133,8 +156,46 @@ a:hover{
   background-color: initial;
 }
 
-.contact {
+#contact,
+#development,
+#clients_opinion,
+#projects {
+  h1 {
+    @extend .is-green-80;
+  }
+}
 
+#how-we-work {
+  h2 {
+    @extend .is-green-80;
+  }
+}
+
+.contact {
+  .input,
+  .textarea {
+    border: 0;
+    border-bottom: 1px solid #767676;
+    border-radius: 0;
+    background: $jalappeno-white;
+    box-shadow: none;
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #767676 !important;
+      opacity: 1 !important; /* Firefox */
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #767676 !important;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: #767676 !important;
+    }
+  }
+  
+  .person {
+    border: 15px solid $primary;
+  }
 }
 
 .has-bg-green-100 {
@@ -146,7 +207,7 @@ a:hover{
 }
 
 .text-styles-on-bg-change {
-  color: $jalappeno-gray !important;
+  color: white !important;
   font-weight: bold;
 }
 

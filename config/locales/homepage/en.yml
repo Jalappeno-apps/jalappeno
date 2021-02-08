@@ -1,21 +1,21 @@
 en:
   homepage:
     hero:
-      tagline: the most <span class='is-green-80'>customer oriented</span><br class='no-mob-br'/>digital agency in the world
+      tagline: The most <span class='is-green-80'>customer oriented</span><br class='no-mob-br'/>digital agency in the world
       subtitle: our mission is to bring you success through digital solutions.
       book_meeting: book online meeting
     work:
       how: How we work?
       subtitle: our mission is to bring you success through digital solutions.
       step_1:
-        step: Step 1
-        meeting: Online Meeting
+        step: step 1
+        meeting: online meeting
         content: 
           p1: It doesn’t matter where do you live or what time is it in your country - you can always schedule an online meeting with our experts. It’s completely free for you to take advantage of our experiences and knowledge! That’s a wonderful chance for you to ask us out about everything, related to digital projects! 
           p2: The purpose of meeting is to give you the idea of most <span class='is-green-80'>cost-effective</span> and <span class='is-green-80'>minimum viable solution</span> to achieve your goal in the shortest time!
       step_2:
-        step: Step 2
-        design: Product Design
+        step: step 2
+        design: product design
         content: 
           p1: Here we will formulate together, your business ideas into the prototype. Our product designers will prepare for you
           points: 
@@ -26,15 +26,26 @@ en:
           p2: as ready, interactive prototype that you can verify.
           p3: <span class='is-green-80'>Yes, you can get MVP in just 1 week and confront your idea with the market / investors!</span>
       step_3:
-        step: Step 3
+        step: step 3
         research: research, development, testing
         content:
           p1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum lectus ante tellus cursus. Fermentum elementum gravida sed id egestas. Eget tincidunt tincidunt cursus morbi pellentesque pulvinar. Interdum massa malesuada sit enim sed orci, dis erat venenatis.
       step_4:
-        step: Step 4
+        step: step 4
+        maintaince: maintenance & support
         content:
           p1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum lectus ante tellus cursus. Fermentum elementum gravida sed id egestas. Eget tincidunt tincidunt cursus morbi pellentesque pulvinar. Interdum massa malesuada sit enim sed orci, dis erat venenatis.
+      step_5:
+        step: step 5
+        marketing: digital marketing
     clients:
       opinion: Client's opinion 
     projects:
-      our_projects: Our projects
+      our_projects: our projects
+      healthcare_clinic: Redesign for healthcare clinic
+      cbd_manufacturer: E-commerce for CBD manufacturer
+      glamping_business: Booking web app for Glamping business
+      furniture_store: Custom e-commerce for a luxurious furniture store
+      ohs_industry: E-commerce for OHS industry
+      dentist: Custom booking website for dentist
+      cosmetic_salon: Website for cosmetic salon chain in Poland
