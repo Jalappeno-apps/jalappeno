@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/", to: "under_construction#index"
   get "home", to: "homepage#index"
 
-  get "/hempchamp", to: "hempchamp#index", as: :hempchamp
+  get "/projects/:project" => "projects#show"
 
   scope '(:locale)', locale: /en|pl/ do
     root "homepage#index"
