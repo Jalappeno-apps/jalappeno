@@ -8,43 +8,47 @@ section.pt-6.mt-6
         p.project__introduction.mt-6.has-text-left
             | We have built fully customized booking web app for the innovative glamping business in Poland. The app is inspired by the best acommodation platforms with great UX and presentation of the beautiful place which is Kimura Glamping.
         .columns.mt-6.project__points
-            .column
-                .has-text-left
+            .column.column--project__points
+                .has-text-left.project__points__icon
                     = image_tag "team-icon.png"
                     h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Team"
-                ul
-                    li = "Product Owner"
-                    li = "UI/UX Designer"
-                    li = "Back-end developer"
-                    li = "Front-end developer"
-                .has-text-left
+                div.project__points__container
+                    ul
+                        li = "Product Owner"
+                        li = "UI/UX Designer"
+                        li = "Back-end developer"
+                        li = "Front-end developer"
+                .has-text-left.project__points__icon.mt-3
                     = image_tag "tech-stack-icon.png"
-                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold.mt-4 = "Tech stack"
-                ul
-                    li = "Figma"
-                    li = "Adobe Photoshop"
-                    li = "Ruby on Rails"
-                    li = "React"
-                    li = "Rails Booky (Our own software)"
-                    li = "AWS / Linode"
-            .column
-                .has-text-left
+                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Tech stack"
+                div.project__points__container
+                    ul
+                        li = "Figma"
+                        li = "Adobe Photoshop"
+                        li = "Ruby on Rails"
+                        li = "React"
+                        li = "Rails Booky (Our own software)"
+                        li = "AWS / Linode"
+            .column.column--project__points
+                .has-text-left.project__points__icon
                     = image_tag "scope-icon.png"
                     h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Scope"
-                ul
-                    li = "Product Design"
-                    li = "User Interface Design"
-                    li = "User Experience Design"
-                    li = "Front-end and Back-end development"
-                    li = "Spreecommerce integration"
-                    li = "Server management (Migration)"
-                    li = "Mobile development"
-                    li = "Quality assurance"
-                .has-text-left
+                div.project__points__container
+                    ul
+                        li = "Product Design"
+                        li = "User Interface Design"
+                        li = "User Experience Design"
+                        li = "Front-end and Back-end development"
+                        li = "Spreecommerce integration"
+                        li = "Server management (Migration)"
+                        li = "Mobile development"
+                        li = "Quality assurance"
+                .has-text-left.project__points__icon.mt-3
                     = image_tag "delivery-time-icon.png"
-                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold.mt-4 = "Delivery time"
-                ul
-                    li = "MVP in just 3 weeks"
+                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Delivery time"
+                div.project__points__container
+                    ul
+                        li = "MVP in just 3 weeks"
         .project__desktop.has-text-centered
             = image_tag "projects/kimuraglamping/kimuraglamping_2.png"
         
