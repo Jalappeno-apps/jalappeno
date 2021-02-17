@@ -3,6 +3,23 @@
   max-height: initial;
 }
 
+.navbar-brand {
+  &__call-now {
+    background-color: #28DD8B;
+    color: white;
+    border-radius: 10px;
+    font-weight: 300 !important;
+  }
+}
+
+.navbar-item__logo {
+  @include mobile {
+    img {
+      width: 150px;
+    }
+  }
+}
+
 @include desktop {
   .navbar-end {
     justify-content: space-between;
@@ -25,4 +42,89 @@ nav, .navbar {
   background: white;
   background-color: white;
   transition: all 500ms;
+}
+
+@include touch {
+  .navbar-brand {
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .navbar-burger {
+    height: 3.5em;
+    margin-left: initial;
+    background: transparent !important;
+    span {
+      width: 30px;
+      height: 2px;
+    }
+  }
+  .navbar-right {
+    width: 100%;
+  }
+
+  .navbar-burger.is-active {
+    z-index: 1;
+    color: white;
+    background: transparent !important;
+    span {
+      color: white;
+    }
+  }
+  .navbar-end {
+    padding: 2rem;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: white;
+
+      @include mobile {
+        justify-content: center;
+      }
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .navbar-menu {
+    background-image: asset-url('mobile-background.png');
+    background-color: #4BEF9D;
+    position: absolute;
+    height: 100vh;
+    max-height: 100vh !important;
+    width: 100vw;
+    top: 0;
+    left: -90vw;
+    color: black;
+  }
+
+  .navbar-item {
+    font-weight: 600;
+  }
+
+  .navbar-menu.is-active {
+    transition: 1s;
+    left: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.navbar-end__call-now {
+  background-color: white;
+  color: #28DD8B !important;
+  border-radius: 27px;
+  font-weight: 300;
 }
