@@ -1,22 +1,28 @@
 nav.container-fluid.navbar.is-fixed-top.p-5 role="navigation" aria-label="main navigation"
   .navbar-brand
-    a.navbar-item href="/"
+    a.navbar-item.is-hidden-desktop.button.is-primary href="tel:+48713333222"
+      = "call now"
+    a.navbar-item.navbar-item__logo href="/"
       = image_tag "logo"
 
     a.navbar-burger.burger role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
-      span aria-hidden="true"
-      span aria-hidden="true"
-      span aria-hidden="true"
+      span.is-green-100 aria-hidden="true"
+      span.is-green-100 aria-hidden="true"
+      span.is-green-100 aria-hidden="true"
 
-  .navbar-menu
-    .navbar-star
+  .navbar-menu id="navbarBasicExample"
+    .navbar-start
 
     .navbar-end
-      a.navbar-item = t('navbar.about_us')
-      a.navbar-item = t('navbar.team')
-      a.navbar-item = t('navbar.clients')
-      a.navbar-item = t('navbar.blog')
+      a.navbar-item.is-size-4-touch = t('navbar.about_us')
+      a.navbar-item.is-size-4-touch href="#development"
+        = t('navbar.team')
+      a.navbar-item.is-size-4-touch href="#projects"
+        = t('navbar.clients')
+      a.navbar-item.is-size-4-touch = t('navbar.blog')
+      a.navbar-item.is-hidden-desktop.navbar-end__call-now.is-size-4-touch href="tel:+48713333222"
+        = "call now"
 
-      .navbar-item
+      .navbar-item.is-hidden-touch
         .buttons
           a.button.is-primary = t('navbar.contact')

@@ -1,0 +1,31 @@
+.container--landing {
+    @include touch {
+        padding: 0 30px;
+    }
+
+    h1 {
+        line-height: 35px;
+    }
+}
+
+.landing {
+    &__reach-us {
+        border: 1px solid #28DD8B;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__project__founder {
+        margin: 0 auto;
+        border: 10px solid #E0E0E0;
+    }
+    &__footer {
+        background-color: #28DD8B;
+    }
+
+    &__team__person {
+        border: 10px solid #28DD8B;
+    }
+}

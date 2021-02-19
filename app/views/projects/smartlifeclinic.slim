@@ -8,48 +8,52 @@ section.pt-6.mt-6
         p.project__introduction.mt-6.has-text-left
             | We have build completely new website with customized design, copywriting, graphics, logo and physical materials like business cards, posters or window graphics for the healthcare clinic from Warsaw. Due to clients expansion and movement to the new place, we have privided a full redesign service on both online and offline fields. We had a great time with exceptional experts like doctors or operation directors who closely cooperated with us to create together unique project!
         .columns.mt-6.project__points
-            .column
-                .has-text-left
+            .column.column--project__points
+                .has-text-left.project__points__icon
                     = image_tag "team-icon.png"
                     h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Team"
-                ul
-                    li = "Product Owner"
-                    li = "UI/UX Designer"
-                    li = "Back-end developer"
-                    li = "Front-end developer"
-                    li = "Communication designer / Copywriter"
-                .has-text-left
+                div.project__points__container
+                    ul
+                        li = "Product Owner"
+                        li = "UI/UX Designer"
+                        li = "Back-end developer"
+                        li = "Front-end developer"
+                        li = "Communication designer / Copywriter"
+                .has-text-left.project__points__icon.mt-3
                     = image_tag "tech-stack-icon.png"
-                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold.mt-4 = "Tech stack"
-                ul
-                    li = "Figma"
-                    li = "Adobe Photoshop"
-                    li = "Ruby on Rails"
-                    li = "Server management: Linode"
-                    li = "React"
-            .column
-                .has-text-left
+                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Tech stack"
+                div.project__points__container
+                    ul
+                        li = "Figma"
+                        li = "Adobe Photoshop"
+                        li = "Ruby on Rails"
+                        li = "Server management: Linode"
+                        li = "React"
+            .column.column--project__points
+                .has-text-left.project__points__icon
                     = image_tag "scope-icon.png"
                     h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Scope"
-                ul
-                    li = "Briefing & Consultancy"
-                    li = "Competition analysis"
-                    li = "Identifying opportunities and challenges"
-                    li = "Specyfing brand attributes"
-                    li = "Design of the logotype & other marketing materials"
-                    li = "Card sorting & information architecture"
-                    li = "Product Design"
-                    li = "User Interface Design"
-                    li = "User Experience Design"
-                    li = "Front-end and Back-end development"
-                    li = "Server management (Migration)"
-                    li = "Mobile development"
-                    li = "Quality assurance"
+                div.project__points__container
+                    ul
+                        li = "Briefing & Consultancy"
+                        li = "Competition analysis"
+                        li = "Identifying opportunities and challenges"
+                        li = "Specyfing brand attributes"
+                        li = "Design of the logotype & other marketing materials"
+                        li = "Card sorting & information architecture"
+                        li = "Product Design"
+                        li = "User Interface Design"
+                        li = "User Experience Design"
+                        li = "Front-end and Back-end development"
+                        li = "Server management (Migration)"
+                        li = "Mobile development"
+                        li = "Quality assurance"
                 .has-text-left
                     = image_tag "delivery-time-icon.png"
-                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold.mt-4 = "3 months"
-                ul
-                    li = "4 weeks"
+                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "3 months"
+                div.project__points__container
+                    ul
+                        li = "4 weeks"
         .project__desktop.has-text-centered
             = image_tag "projects/hempchamp/hempchamp_2.png"
         
