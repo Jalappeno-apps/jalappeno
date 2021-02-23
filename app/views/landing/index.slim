@@ -1,4 +1,4 @@
-.container.container--landing.pt-6.mt-6
+.container.container--landing.pt-6.mt-2
     .columns.mb-6.is-hidden-mobile
         .column.is-7
             h1.is-size-3.has-text-left.is-black.has-text-weight-medium.mt-6.mb-6
@@ -30,7 +30,6 @@
             .landing__reach-us.pt-6.pb-6
                 = image_tag "phone-icon.svg", class: "mt-3"
                 p.is-green-100.has-text-weight-semibold.mt-3 = "call me now!"
-                p.is-black.has-text-weight-medium.mt-3 = "+48 693-896-717"
                 a.button.is-primary.mt-3 href="tel:+48693896717"
                     = "call now" 
         .column
@@ -195,18 +194,19 @@
           |  first
         label.checkbox
           input[type="checkbox"]
-          |  I agree to the processing of personal data provided according to 
-          span.is-green-80.is-bold
-            | Privacy Policy
+          |  I agree to the processing of personal data provided according to our
+          a style="cursor: pointer; display: block;" href="/privacy-policy" target="_blank"
+            span.is-green-80.is-bold
+                | Privacy Policy
 .landing__footer
-    .is-flex.is-justify-content-center.pt-6
+    .is-flex.is-justify-content-center.landing__footer__container
         a.button.is-primary.mt-3.mr-3.mb-5 href="tel:+48693896717" style="border: 1px solid white;"
             = "call now"
         a.button.is-primary.mt-3.is-green-100.has-bg-white href="+48 693-896-717" style="color: #28DD8B !important;"
             = "book meeting"
     p.is-white.has-text-centered = "Designed and developed by jalappeno © 2021"
     .is-flex.is-justify-content-center.pt-3.pb-5
-        a.is-white.mr-3
+        a.is-white.mr-3 style="cursor: pointer;" href="/privacy-policy" target="_blank"
             = "privacy policy"
-        a.is-white
-            = "terms of service"
+        a.is-white style="cursor: pointer;" href="/terms-of-service" target="_blank"
+            = "terms of service" 
