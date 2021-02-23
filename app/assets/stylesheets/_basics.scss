@@ -76,7 +76,7 @@ a {
   }
 
   .card-content {
-    @extend .has-padding-12;
+    padding: 12px 0;
   }
 }
 
