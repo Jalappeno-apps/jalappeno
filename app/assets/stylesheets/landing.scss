@@ -1,6 +1,7 @@
 .container--landing {
     @include touch {
         padding: 0 30px;
+        margin-top: 0 !important;
     }
 
     h1 {
@@ -9,6 +10,21 @@
 }
 
 .landing {
+    &__navbar__logo {
+        a {
+            padding: 10px !important;
+        }
+        img {
+            width: 75%;
+            @include mobile {
+                width: 25%;
+            }
+            @media screen and (max-width: 350px) {
+                width: 15%;
+            }
+        }
+    }
+
     &__reach-us {
         border: 1px solid #28DD8B;
         height: 100%;
@@ -23,6 +39,12 @@
     }
     &__footer {
         background-color: #28DD8B;
+        &__container {
+            padding-top: 0.5rem;
+            @include tablet {
+                padding-top: 3rem;
+            }
+        }
     }
 
     &__team__person {
