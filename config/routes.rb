@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get "/projects/:project" => "projects#show"
 
+  get 'terms-of-service', to: 'static_pages#terms_of_service'
+  get 'privacy-policy', to: 'static_pages#privacy_policy'
+
   scope '(:locale)', locale: /en|pl/ do
     root "homepage#index"
   end
