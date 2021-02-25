@@ -46,6 +46,9 @@ var first_section = new ScrollMagic.Scene({
     triggerElement: "#trigger1",
   }).setPin("#first_frame").addTo(controller);
 
+var last_section = new ScrollMagic.Scene({
+      triggerElement: "#last-step",
+}).addTo(controller);
 
 console.log()
 
@@ -173,7 +176,7 @@ export default class MyComponent extends Component {
       document.getElementsByClassName("image_container")[0].classList.remove("image_container_invisble");
     })
 
-    fifth_section.on("change start enter", (event) => {
+    last_section.on("change start enter", (event) => {
       document.getElementsByClassName("image_container")[0].classList.add("image_container_invisble");
     })
   }
@@ -188,7 +191,7 @@ export default class MyComponent extends Component {
   render(){
     return(
       <Container 
-        className="image_container"
+        className="image_container is-hidden-touch"
         onScroll={this.onScroll}
         animate={{
           x : this.state.position ? "0%" : "130%",
