@@ -4,18 +4,18 @@ section.work.container id="how-we-work"
   .work__section
     h2.is-size-4-touch.title.has-text-centered = t 'work.how', scope: i18n_scope
     h3.subtitle.has-text-centered.has-pt-5.has-mb-240.has-mb-72-touch = t 'work.subtitle', scope: i18n_scope 
-    .work__section__inside.has-mb-180.has-mb-72-touch
+    .work__section__inside.has-mb-180.has-mb-36-touch
       .columns.reverse-columns
         .column.is-two-fifths
           .step__image--first id="first_frame"
         .column.is-one-fifth
         .column.is-two-fifths
           .is-block.is-hidden-tablet
-            = image_tag 'image_1_mobile', class: "margin-0-auto is-block is-hidden-tablet mb-6"
+            = image_tag 'image_1_mobile', class: "margin-0-auto is-block is-hidden-tablet mb-4"
           .step__text
             .has-text-centered.is-hidden-tablet.is-flex.is-justify-content-center.is-align-items-center
-              .step__number.is-inline-block.mr-2 = t 'work.step_1.step', scope: i18n_scope
-              .step__title.is-size-2.is-size-4-touch.is-inline-block = t 'work.step_1.meeting', scope: i18n_scope
+              .step__number.is-inline-block.is-size-6-touch.mr-2 = t 'work.step_1.step', scope: i18n_scope
+              .step__title.is-size-2.is-size-6-touch.is-inline-block = t 'work.step_1.meeting', scope: i18n_scope
             .step__number.has-pb-18.is-hidden-mobile = t 'work.step_1.step', scope: i18n_scope
             .step__title.is-size-2.is-size-4-touch.is-hidden-mobile = t 'work.step_1.meeting', scope: i18n_scope
             .step__content.mt-5.spacer.s0 id="trigger1"
@@ -25,14 +25,17 @@ section.work.container id="how-we-work"
             .s0 id="trigger1"
 
 
-    .work__section__inside.has-mb-180.has-mb-72-touch
+    .work__section__inside.has-mb-180.has-mb-36-touch
       .columns
         .column
           .is-block.is-hidden-tablet
-            = image_tag 'image_2_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-6"
+            = image_tag 'image_2_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-4"
           .step__text
-            .step__number = t 'work.step_2.step', scope: i18n_scope
-            .step__title.is-size-2.is-size-4-touch.mt-5 = t 'work.step_2.design', scope: i18n_scope
+            .has-text-centered.is-hidden-tablet.is-flex.is-justify-content-center.is-align-items-center
+              .step__number.is-inline-block.is-size-6-touch.mr-2 = t 'work.step_2.step', scope: i18n_scope
+              .step__title.is-size-2.is-size-6-touch.is-inline-block = t 'work.step_2.design', scope: i18n_scope
+            .step__number.is-hidden-mobile = t 'work.step_2.step', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5.is-hidden-mobile = t 'work.step_2.design', scope: i18n_scope
             .step__content.mt-5
               p = t 'work.step_2.content.p1', scope: i18n_scope
               .content
@@ -50,29 +53,35 @@ section.work.container id="how-we-work"
             = image_tag 'background', class: "is-hidden-touch"
         .s0 id="trigger2"
 
-    .work__section__inside.spacer.has-mb-180.has-mb-72-touch
+    .work__section__inside.spacer.has-mb-180.has-mb-36-touch
       .columns.reverse-columns
         .column
           .step__image--third
             = image_tag 'background', class: "is-hidden-touch"
         .column
           .is-block.is-hidden-tablet
-            = image_tag 'image_3_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-6"
+            = image_tag 'image_3_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-4"
           .step__text
-            .step__number = t 'work.step_3.step', scope: i18n_scope
-            .step__title.is-size-2.is-size-4-touch.mt-5.is-lowercase = t 'work.step_3.research', scope: i18n_scope
+            .has-text-centered.is-hidden-tablet.is-flex.is-justify-content-center.is-align-items-center
+              .step__number.is-inline-block.is-size-6-touch.mr-2 = t 'work.step_3.step', scope: i18n_scope
+              .step__title.is-size-2.is-size-5-touch.is-size-6-touch.is-inline-block = t 'work.step_3.research', scope: i18n_scope
+            .step__number.is-hidden-mobile = t 'work.step_3.step', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5.is-lowercase.is-hidden-mobile = t 'work.step_3.research', scope: i18n_scope
             .step__content.mt-5
               p = t 'work.step_3.content.p1', scope: i18n_scope
         .s0 id="trigger3"
 
-    .work__section__inside.has-mb-180.has-mb-72-touch
+    .work__section__inside.has-mb-180.has-mb-36-touch
       .columns
         .column
           .is-block.is-hidden-tablet
-            = image_tag 'image_4_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-6"
+            = image_tag 'image_4_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-4"
           .step__text
-            .step__number = t 'work.step_4.step', scope: i18n_scope
-            .step__title.is-size-2.is-size-4-touch.mt-5 = t 'work.step_4.maintaince', scope: i18n_scope
+            .has-text-centered.is-hidden-tablet.is-flex.is-justify-content-center.is-align-items-center
+              .step__number.is-inline-block.is-size-6-touch.mr-2 = t 'work.step_4.step', scope: i18n_scope
+              .step__title.is-size-2.is-size-6-touch.is-inline-block = t 'work.step_4.maintaince', scope: i18n_scope
+            .step__number.is-hidden-mobile = t 'work.step_4.step', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5.is-hidden-mobile = t 'work.step_4.maintaince', scope: i18n_scope
             .step__content.mt-5
               p = t 'work.step_4.content.p1', scope: i18n_scope
         .column
@@ -87,10 +96,13 @@ section.work.container id="how-we-work"
             = image_tag 'background', class: "is-hidden-touch"
         .column
           .is-block.is-hidden-tablet
-            = image_tag 'image_5_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-6"
+            = image_tag 'image_5_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-4"
           .step__text
-            .step__number = t 'work.step_5.step', scope: i18n_scope
-            .step__title.is-size-2.is-size-4-touch.mt-5.is-lowercase = t 'work.step_5.marketing', scope: i18n_scope
+            .has-text-centered.is-hidden-tablet.is-flex.is-justify-content-center.is-align-items-center
+              .step__number.is-inline-block.is-size-6-touch.mr-2 = t 'work.step_5.step', scope: i18n_scope
+              .step__title.is-size-2.is-size-6-touch.is-inline-block = t 'work.step_5.marketing', scope: i18n_scope
+            .step__number.is-hidden-mobile = t 'work.step_5.step', scope: i18n_scope
+            .step__title.is-size-2.is-size-4-touch.mt-5.is-lowercase.is-hidden-mobile = t 'work.step_5.marketing', scope: i18n_scope
             .step__content.mt-5
               p = t 'work.step_3.content.p1', scope: i18n_scope
         .s0 id="trigger5"
