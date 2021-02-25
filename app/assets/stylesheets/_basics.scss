@@ -11,7 +11,7 @@ a {
 
 @include touch {
   .container {
-    padding: 0px 10px;
+    padding: 0px 20px;
   }
 }
 
@@ -76,7 +76,7 @@ a {
   }
 
   .card-content {
-    @extend .has-padding-12;
+    padding: 12px 0;
   }
 }
 

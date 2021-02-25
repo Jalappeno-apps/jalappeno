@@ -46,6 +46,9 @@ var first_section = new ScrollMagic.Scene({
     triggerElement: "#trigger1",
   }).setPin("#first_frame").addTo(controller);
 
+var last_section = new ScrollMagic.Scene({
+      triggerElement: "#last-step",
+}).addTo(controller);
 
 console.log()
 
@@ -61,121 +64,127 @@ export default class MyComponent extends Component {
 
   componentDidMount() {
     // first_section.on
-    second_section.on("start enter", (event) => {
-      this.onScroll(0, image_2)
-      document.body.classList.add("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.add("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.add("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.add("text-styles-on-bg-change");
-      });
-    } )
-    second_section.on("end leave", (event) => {
-      this.onScroll(1, image_1);
-      document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-    } )
+    let mediaQuery;
+    if (window) {
+      mediaQuery = window.matchMedia('(min-width: 1024px)')
+    }
+    if (mediaQuery && mediaQuery.matches) {
+      second_section.on("start enter", (event) => {
+        this.onScroll(0, image_2)
+        document.body.classList.add("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.add("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.add("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.add("text-styles-on-bg-change");
+        });
+      } )
+      second_section.on("end leave", (event) => {
+        this.onScroll(1, image_1);
+        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+      } )
 
-    third_section.on("start enter", (event) => {
-      this.onScroll(1, image_3);
-      document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-    } )
-    third_section.on("end leave", (event) => {
-      this.onScroll(0, image_2);
-      document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-    } )
+      third_section.on("start enter", (event) => {
+        this.onScroll(1, image_3);
+        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+      } )
+      third_section.on("end leave", (event) => {
+        this.onScroll(0, image_2);
+        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+      } )
 
-    fourth_section.on("start enter", (event) => {
-      this.onScroll(0, image_4);
-      document.body.classList.add("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.add("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.add("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.add("text-styles-on-bg-change");
-      });
-    } )
+      fourth_section.on("start enter", (event) => {
+        this.onScroll(0, image_4);
+        document.body.classList.add("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.add("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.add("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.add("text-styles-on-bg-change");
+        });
+      } )
 
-    fourth_section.on("end leave", (event) => {
-      console.log(event);
-      this.onScroll(1, image_3);
-      document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-    } )
+      fourth_section.on("end leave", (event) => {
+        console.log(event);
+        this.onScroll(1, image_3);
+        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+      } )
 
-    fifth_section.on("start enter", (event) => {
-      this.onScroll(1, image_5);
-      document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-    } )
+      fifth_section.on("start enter", (event) => {
+        this.onScroll(1, image_5);
+        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+      } )
 
-    fifth_section.on("end leave", (event) => {
-      this.onScroll(0, image_4);
-      document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-      document.querySelectorAll(".step__title").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".step__content").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.querySelectorAll(".is-green-80").forEach( x => {
-        x.classList.remove("text-styles-on-bg-change");
-      });
-      document.getElementsByClassName("image_container")[0].classList.remove("image_container_invisble");
-    })
+      fifth_section.on("end leave", (event) => {
+        this.onScroll(0, image_4);
+        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
+        document.querySelectorAll(".step__title").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".step__content").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.querySelectorAll(".is-green-80").forEach( x => {
+          x.classList.remove("text-styles-on-bg-change");
+        });
+        document.getElementsByClassName("image_container")[0].classList.remove("image_container_invisble");
+      })
 
-    fifth_section.on("change start enter", (event) => {
-      document.getElementsByClassName("image_container")[0].classList.add("image_container_invisble");
-    })
+      last_section.on("change start enter", (event) => {
+        document.getElementsByClassName("image_container")[0].classList.add("image_container_invisble");
+      })
+    }
   }
 
   onScroll = (set, image) => {
@@ -186,9 +195,10 @@ export default class MyComponent extends Component {
   }
 
   render(){
+    if (window && !(window.matchMedia('(min-width: 1024px)').matches)) return <div></div>
     return(
       <Container 
-        className="image_container"
+        className="image_container is-hidden-touch"
         onScroll={this.onScroll}
         animate={{
           x : this.state.position ? "0%" : "130%",
