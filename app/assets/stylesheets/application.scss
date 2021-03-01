@@ -23,6 +23,16 @@ body {
   overflow-x: none;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #28DD8B;
+}
+
+::selection {
+  color: white;
+  background: #28DD8B;
+}
+
 .chilli__background {
   position: absolute;
 
