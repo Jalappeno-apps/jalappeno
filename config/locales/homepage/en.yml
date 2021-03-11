@@ -2,20 +2,21 @@ en:
   homepage:
     hero:
       tagline: The most <span class='is-green-80'>customer oriented </span><br class='no-mob-br'/>digital agency in the world
-      subtitle: our mission is to bring you success through digital solutions.
+      subtitle: Your digital success is our top priority.
       book_meeting: book online meeting
     work:
-      how: How we work?
-      subtitle: our mission is to bring you success through digital solutions.
+      visualize: Let’s visualize you our journey
+      subtitle: To make your project a success, we will go through the following processes together.
       step_1:
-        step: step 1
-        meeting: online meeting
+        step: Meeting & Consultancy
+        meeting: Let’s talk about your needs
         content: 
-          p1: It doesn’t matter where do you live or what time is it in your country - you can always schedule an online meeting with our experts. It’s completely free for you to take advantage of our experiences and knowledge! That’s a wonderful chance for you to ask us out about everything, related to digital projects! 
-          p2: The purpose of meeting is to give you the idea of most <span class='is-green-80'>cost-effective</span> and <span class='is-green-80'>minimum viable solution</span> to achieve your goal in the shortest time!
+          p1: It’s completely free for you to take advantage of our experiences and knowledge! That’s a wonderful chance for you to ask us out about everything, related to digital projects!
+          p2: The purpose of the meeting is to give you the idea of the most cost-effective and minimum viable solution to achieve your goal in the shortest time!
+          p3: We can meet face to face or have a comfortable online call. You decide!
       step_2:
-        step: step 2
-        design: product design
+        step: Product Design
+        design: Brainstorming & prototyping
         content: 
           p1: Here we will formulate together, your business ideas into the prototype. Our product designers will prepare for you
           points: 
@@ -26,22 +27,21 @@ en:
           p2: as ready, interactive prototype that you can verify.
           p3: <span class='is-green-80'>Yes, you can get MVP in just 1 week and confront your idea with the market / investors!</span>
       step_3:
-        step: step 3
-        research: research, development, testing
+        step: Development
+        research: Iterative, scrum development
         content:
-          p1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum lectus ante tellus cursus. Fermentum elementum gravida sed id egestas. Eget tincidunt tincidunt cursus morbi pellentesque pulvinar. Interdum massa malesuada sit enim sed orci, dis erat venenatis.
+          p1: Scrum is a framework within you can address complex adaptive problems, while we can efficiently and creatively deliver the product of the highest possible value.
+          p2: Scrum is a lightweight way of cooperation that will help you and your organization generate value through adaptive solutions for complex problems.
+          p3: We’ll provide you full stack development, with continual testing and quality assurance to deliver a robust, high-performance web-apps.
       step_4:
-        step: step 4
-        maintaince: maintenance & support
+        step: Maintenance
+        maintaince: Maintenance
         content:
-          p1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum lectus ante tellus cursus. Fermentum elementum gravida sed id egestas. Eget tincidunt tincidunt cursus morbi pellentesque pulvinar. Interdum massa malesuada sit enim sed orci, dis erat venenatis.
-      step_5:
-        step: step 5
-        marketing: digital marketing
+          p1: We take care of the most important part of the digital product lifecycle - maintenance. With us, you don't have to worry about the proper functioning of the program, updates, or hosting service. Each of our clients is connected to our remote communication app where they can submit their requests and our team will respond to any task in no time.
     clients:
       opinion: Client's opinion 
     projects:
-      our_projects: our projects
+      our_projects: Check out our projects
       healthcare_clinic: Redesign for healthcare clinic
       cbd_manufacturer: E-commerce for CBD manufacturer
       glamping_business: Booking web app for Glamping business
