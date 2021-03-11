@@ -23,6 +23,16 @@ body {
   overflow-x: none;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #28DD8B;
+}
+
+::selection {
+  color: white;
+  background: #28DD8B;
+}
+
 .chilli__background {
   position: absolute;
 
@@ -38,26 +48,50 @@ body {
 
     &--first {
       background: asset-url('chilli-1') no-repeat center center;
-      z-index: 1;
+      z-index: 0;
     }
 
     &--second {
       background: asset-url('chilli-2') no-repeat center center;
-      z-index: 2;
+      z-index: 0;
     }
     &--third {
       background: asset-url('chilli-3') no-repeat center center;
-      z-index: 3;
+      z-index: 0;
     }
     &--fourth {
       background: asset-url('chilli-4') no-repeat center center;
-      z-index: 4;
+      z-index: 0;
     }
     &--fifth {
       background: asset-url('chilli-5') no-repeat center center;
-      z-index: 5;
+      z-index: 0;
     }
   }
+}
+
+.chilli__background:nth-child(2) {
+  top: 100vh;
+}
+
+.chilli__background:nth-child(3) {
+  top: 200vh;
+}
+
+.chilli__background:nth-child(4) {
+  top: 300vh;
+}
+
+.chilli__background:nth-child(5) {
+  top: 400vh;
+}
+
+.chilli__background:nth-child(6) {
+  top: 500vh;
+}
+
+.chilli__background:nth-child(7) {
+  top: 600vh;
 }
 
 .work {
@@ -94,7 +128,7 @@ body {
     font-weight: bold;
   }
   .step__title {
-    line-height: 2;
+    line-height: 37px;
     color: map-get($jalappeno, 'green-100');
     font-weight: 600;
   }
@@ -227,4 +261,19 @@ a:hover{
 
 .w-50 {
   width: 50%;
+}
+
+.columns--development {
+  .column {
+    text-align: center; 
+    figure {
+      width: 75%;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 600px) {
+      figure {
+        width: 50%;
+      } 
+    }
+  }
 }

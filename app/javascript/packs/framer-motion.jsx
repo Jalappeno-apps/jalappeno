@@ -10,7 +10,6 @@ import image_1 from "../../assets/images/image_1";
 import image_2 from "../../assets/images/image_2";
 import image_3 from "../../assets/images/image_3";
 import image_4 from "../../assets/images/image_4";
-import image_5 from "../../assets/images/image_5";
 
 const Container = styled(motion.div)`
   position: absolute;
@@ -25,10 +24,6 @@ const Item  = styled(motion.div)`
 
 var section = document.getElementById("how-we-work");
 var controller = new ScrollMagic.Controller();
-
-var fifth_section = new ScrollMagic.Scene({
-      triggerElement: "#trigger5",
-    }).addTo(controller);
 
 var fourth_section = new ScrollMagic.Scene({
       triggerElement: "#trigger4",
@@ -71,113 +66,25 @@ export default class MyComponent extends Component {
     if (mediaQuery && mediaQuery.matches) {
       second_section.on("start enter", (event) => {
         this.onScroll(0, image_2)
-        document.body.classList.add("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.add("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.add("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.add("text-styles-on-bg-change");
-        });
-      } )
+      })
       second_section.on("end leave", (event) => {
         this.onScroll(1, image_1);
-        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-      } )
+      })
 
       third_section.on("start enter", (event) => {
         this.onScroll(1, image_3);
-        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-      } )
+      })
       third_section.on("end leave", (event) => {
         this.onScroll(0, image_2);
-        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
       } )
 
       fourth_section.on("start enter", (event) => {
         this.onScroll(0, image_4);
-        document.body.classList.add("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.add("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.add("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.add("text-styles-on-bg-change");
-        });
       } )
 
       fourth_section.on("end leave", (event) => {
         console.log(event);
         this.onScroll(1, image_3);
-        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-      } )
-
-      fifth_section.on("start enter", (event) => {
-        this.onScroll(1, image_5);
-        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-      } )
-
-      fifth_section.on("end leave", (event) => {
-        this.onScroll(0, image_4);
-        document.body.classList.remove("has-bg-green-90", "has-text-on-bg-green-90");
-        document.querySelectorAll(".step__title").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".step__content").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
-        document.querySelectorAll(".is-green-80").forEach( x => {
-          x.classList.remove("text-styles-on-bg-change");
-        });
         document.getElementsByClassName("image_container")[0].classList.remove("image_container_invisble");
       })
 
@@ -203,7 +110,6 @@ export default class MyComponent extends Component {
         animate={{
           x : this.state.position ? "0%" : "130%",
           rotateX : 10,
-          rotateY : this.state.position ? -27 : 27,
           scale: 1.2
         }}
         transition={{ duration: 0.4 }}
