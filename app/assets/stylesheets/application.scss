@@ -262,3 +262,18 @@ a:hover{
 .w-50 {
   width: 50%;
 }
+
+.columns--development {
+  .column {
+    text-align: center; 
+    figure {
+      width: 75%;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 600px) {
+      figure {
+        width: 50%;
+      } 
+    }
+  }
+}
