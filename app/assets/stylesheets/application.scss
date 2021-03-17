@@ -31,6 +31,7 @@ body {
 ::selection {
   color: white;
   background: #28DD8B;
+  text-shadow: 2px 2px 1px #0001 ;
 }
 
 .chilli__background {
@@ -112,7 +113,7 @@ body {
   z-index: 6;
   overflow: hidden !important;
 
-  .hero__box { 
+  .hero__box {
     @extend .is-fullheight;
   }
 
@@ -219,16 +220,16 @@ a:hover{
       color: #767676 !important;
       opacity: 1 !important; /* Firefox */
     }
-    
+
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
       color: #767676 !important;
     }
-    
+
     &::-ms-input-placeholder { /* Microsoft Edge */
       color: #767676 !important;
     }
   }
-  
+
   .person {
     border: 15px solid $primary;
   }
@@ -265,7 +266,7 @@ a:hover{
 
 .columns--development {
   .column {
-    text-align: center; 
+    text-align: center;
     figure {
       width: 75%;
       margin: 0 auto;
@@ -273,7 +274,7 @@ a:hover{
     @media screen and (max-width: 600px) {
       figure {
         width: 50%;
-      } 
+      }
     }
   }
 }
