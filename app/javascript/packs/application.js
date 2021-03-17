@@ -15,13 +15,16 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-window.onscroll = (event) =>  {
-  var top =   window.pageYOffset || document.documentElement.scrollTop;
-  let nav = document.querySelector("nav");
+document.addEventListener('turbolinks:load', function() {
+  const nav = document.querySelector("nav");
 
-  if(top > 100) {
-    nav.classList.add("white__nav");
-  } else {
-    nav.classList.remove("white__nav");
-  }
-};
+  window.onscroll = () =>  {
+    let top =   window.pageYOffset || document.documentElement.scrollTop;
+
+    if(top > 100) {
+      nav.classList.add("white__nav", "box__shadow");
+    } else {
+      nav.classList.remove("white__nav", "box__shadow");
+    }
+  };
+});
