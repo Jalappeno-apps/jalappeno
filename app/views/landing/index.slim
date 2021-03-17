@@ -31,7 +31,7 @@
                 = image_tag "phone-icon.svg", class: "mt-3"
                 p.is-green-100.has-text-weight-semibold.mt-3 = "call me now!"
                 a.button.is-primary.mt-3 href="tel:+48693896717"
-                    = "call now" 
+                    = "call now"
         .column
             .landing__reach-us.pt-6.pb-6
                 = image_tag "email-icon.svg", class: "mt-3"
@@ -46,7 +46,7 @@
                     = "choose a date"
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mt-6
         | why would you
-        span.is-green-100  contact 
+        span.is-green-100  contact
         | us?
     .columns.pt-6.mt-6
         .column.is-flex.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
@@ -129,7 +129,7 @@
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mt-6
         | check what others say about
         span.is-green-100   us
-    .columns.mt-6 
+    .columns.mt-6
         .column.has-text-centered
             i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
             figure.image.margin-auto.mt-6
@@ -155,12 +155,12 @@
                 = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
             p.is-black.has-text-weight-semibold.mt-3 = "Karolina Czerwonka, Co-founder"
             p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
-    h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
-        span.is-green-100 book a 
+    h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96
+        span.is-green-100 book a
         |  meeting
     .has-text-centered
-        = image_tag "calendar.png"
-    h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
+        .calendly-inline-widget data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:650px"
+    h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.mb-6
         | contact
         span.is-green-100   us
     .columns.contact.mb-6
@@ -188,7 +188,7 @@
         textarea.mb-3.textarea[placeholder="Message"]
         label.checkbox
           input[type="checkbox"]
-          |  I need 
+          |  I need
           span.is-green-80.is-bold
             | NDA
           |  first
@@ -209,4 +209,6 @@
         a.is-white.mr-3 style="cursor: pointer;" href="/privacy-policy" target="_blank"
             = "privacy policy"
         a.is-white style="cursor: pointer;" href="/terms-of-service" target="_blank"
-            = "terms of service" 
+            = "terms of service"
+
+script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
