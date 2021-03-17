@@ -305,3 +305,37 @@ a:hover{
     }
   }
 }
+
+.appear-from-up {
+  opacity: 0;
+  transform: translateY(-36px);
+}
+
+.appear-from-right {
+  opacity: 0;
+  transform: translateX(-36px);
+}
+
+@keyframes appear-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
