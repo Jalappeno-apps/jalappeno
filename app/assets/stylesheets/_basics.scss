@@ -1,12 +1,12 @@
 html, body {
   @extend .is-body-16;
   scroll-behavior: smooth;
-  cursor: asset-url('cursor-soft-shadowed.svg'), auto;
+  cursor: asset-url('cursor-soft-shadowed.svg') 25 5, auto;
   transition: background 1s ease;
 }
 
 input.input, textarea.textarea {
-  cursor: asset-url('cursor-soft-shadowed-edit.svg'), auto;
+  cursor: asset-url('cursor-soft-shadowed-edit.svg') 25 5, auto;
 }
 
 a {
