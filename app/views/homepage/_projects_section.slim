@@ -3,34 +3,66 @@
 section.projects.container id="projects"
  .projects__section
     h1.is-size-4-touch.title.is-green-90.has-text-centered.has-mb-60 = t 'projects.our_projects', scope: i18n_scope
-    .tile.is.ancestor
-      .tile.is-5.is-vertical.is-parent
-        a.tile.is-child.notification.is-primary.is-flex.is-justify-content-center.is-align-items-center.is-flex-direction-column.has-text-centered.singular href="/projects/smartlifeclinic" target="_blank"
-          = image_tag 'healthcare_clinic.png'
-          p.is-white.has-text-weight-semibold = t 'projects.healthcare_clinic', scope: i18n_scope
-        a.tile.is-child.notification.is-primary.is-flex.is-justify-content-center.is-align-items-center.is-flex-direction-column.has-text-centered.singular href="/projects/artandliving?" target="_blank"
-          = image_tag 'furniture_store.png'
-          p.is-white.has-text-weight-semibold = t 'projects.furniture_store', scope: i18n_scope
-      .tile.is-vertical
-        .tile.is-parent
-          a.tile.is-child.notification.is-primary.is-flex.is-justify-content-center.is-align-items-center.is-flex-direction-column.has-text-centered.mr-15-desktop.mb-15-mobile.singular href="/projects/hempchamp" target="_blank"
-            = image_tag 'cbd_manufacturer.png', class: "is-hidden-touch"
-            = image_tag 'cbd_manufacturer_big.png', class: "is-hidden-desktop"
-            p.is-white.has-text-weight-semibold = t 'projects.cbd_manufacturer', scope: i18n_scope
-          a.tile.is-child.notification.is-primary.is-flex.is-justify-content-center.is-align-items-center.is-flex-direction-column.has-text-centered.singular href="/projects/kimuraglamping" target="_blank"
-            = image_tag 'kimuraglamping.png', class: "is-hidden-touch"
-            = image_tag 'kimuraglamping_big.png', class: "is-hidden-desktop"
-            p.is-white.has-text-weight-semibold = t 'projects.glamping_business', scope: i18n_scope
-        .tile.is-parent
-          a.tile.is-child.notification.is-primary.is-flex.is-justify-content-center.is-align-items-center.is-flex-direction-column.has-text-centered.singular href="/projects/bhpartykuly" target="_blank"
-            = image_tag 'ohs_industry.png', style: "mix-blend-mode: luminosity;"
-            p.is-white.has-text-weight-semibold = t 'projects.ohs_industry', scope: i18n_scope
-        .tile.is-parent
-          a.tile.is-child.notification.is-primary.is-flex.is-justify-content-center.is-align-items-center.is-flex-direction-column.has-text-centered.mr-15-desktop.mb-15-mobile.singular href="/projects/demediplace" target="_blank"
-            = image_tag 'dentist.png', style: "mix-blend-mode: luminosity;", class: "is-hidden-touch"
-            = image_tag 'dentist_big.png', style: "mix-blend-mode: luminosity;", class: "is-hidden-desktop"
-            p.is-white.has-text-weight-semibold = t 'projects.dentist', scope: i18n_scope
-          a.tile.is-child.notification.is-primary.is-flex.is-justify-content-center.is-align-items-center.is-flex-direction-column.has-text-centered.singular href="/projects/przyjaciolkaprzyjaciolki" target="_blank"
-            = image_tag 'cosmetic_salon.png', style: "mix-blend-mode: luminosity;", class: "is-hidden-touch"
-            = image_tag 'cosmetic_salon_big.png', style: "mix-blend-mode: luminosity;", class: "is-hidden-desktop"
-            p.is-white.has-text-weight-semibold = t 'projects.cosmetic_salon', scope: i18n_scope
+.slideshow-container
+  .mySlides.fade
+    .numbertext 1 / 6
+    a href="/projects/smartlifeclinic" target="_blank"
+      img src="assets/projects_smartlifeclinic.png" style="width:60%; margin: 0 auto;" /
+    .text Nice clinic
+  .mySlides.fade
+    .numbertext 2 / 6
+    a href="/projects/artandliving" target="_blank"
+      img src="assets/projects_artandliving.png" style="width:60%; margin: 0 auto;" /
+    .text Custom e-commerce for a luxurious furniture store.
+  .mySlides.fade
+    .numbertext 3 / 6
+    a href="/projects/hempchamp" target="_blank"
+      img src="assets/projects_hempchamp.png" style="width:60%; margin: 0 auto;" /
+    .text E-commerce for CBD manufacturer
+  .mySlides.fade
+    .numbertext 4 / 6
+    a href="/projects/kimuraglamping" target="_blank"
+      img src="assets/projects_glamping.png" style="width:60%; margin: 0 auto;" /
+    .text Booking web app for Glamping business
+  .mySlides.fade
+    .numbertext 5 / 6
+    a href="/projects/bhpartykuly" target="_blank"
+      img src="assets/projects_bhp.png" style="width:60%; margin: 0 auto;" /
+    .text E-commerce for OHS industry
+  .mySlides.fade
+    .numbertext 6 / 6
+    a href="/projects/przyjaciolkaprzyjaciolki" target="_blank"
+      img src="assets/projects_pp.png" style="width:60%; margin: 0 auto;" /
+    .text Website for cosmetic salon chain in Poland
+  a.prev onclick="plusSlides(-1)"  ❮
+  a.next onclick="plusSlides(1)"  ❯
+br/
+javascript:
+   var slideIndex = 1;
+   showSlides(slideIndex);
+
+   // Next/previous controls
+   function plusSlides(n) {
+   showSlides(slideIndex += n);
+   }
+
+   // Thumbnail image controls
+   function currentSlide(n) {
+      showSlides(slideIndex = n);
+   }
+
+   function showSlides(n) {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("dot");
+   if (n > slides.length) {slideIndex = 1}
+   if (n < 1) {slideIndex = slides.length}
+   for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+   }
+   for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";
+   dots[slideIndex-1].className += " active";
+   }
