@@ -31,6 +31,7 @@ body {
 ::selection {
   color: white;
   background: #28DD8B;
+  text-shadow: 2px 2px 1px #0001 ;
 }
 
 .chilli__background {
@@ -112,7 +113,7 @@ body {
   z-index: 6;
   overflow: hidden !important;
 
-  .hero__box { 
+  .hero__box {
     @extend .is-fullheight;
   }
 
@@ -180,10 +181,42 @@ body {
 .button:hover{
   transition: 500ms;
   text-decoration: none;
-  cursor: asset-url('cursor-hover.svg'), auto;
-  background-color: initial;
+  cursor: asset-url('cursor-hover.svg') 20 0, auto;
 }
 
+.button.is-primary-white {
+  background-color: #fff !important;
+  border-radius: 15px;
+}
+
+.button-shadowed {
+  &:hover {
+    box-shadow: 6px 6px 5px #0003;
+  }
+
+  &:active {
+    box-shadow: 4px 4px 4px #0003;
+  }
+}
+
+.button-fill-hover {
+  &, & .has-text-weight-light {
+    transition: 0ms;
+  }
+
+  &:hover {
+    background-color: #28DD8B;
+    transition: 500ms;
+
+    & .has-text-weight-light {
+      color: #fff !important;
+    }
+
+    &, &.has-text-weight-light {
+      transition: 500ms;
+    }
+  }
+}
 
 a:hover{
   transition: 500ms;
@@ -219,16 +252,16 @@ a:hover{
       color: #767676 !important;
       opacity: 1 !important; /* Firefox */
     }
-    
+
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
       color: #767676 !important;
     }
-    
+
     &::-ms-input-placeholder { /* Microsoft Edge */
       color: #767676 !important;
     }
   }
-  
+
   .person {
     border: 15px solid $primary;
   }
@@ -265,7 +298,7 @@ a:hover{
 
 .columns--development {
   .column {
-    text-align: center; 
+    text-align: center;
     figure {
       width: 75%;
       margin: 0 auto;
@@ -273,7 +306,61 @@ a:hover{
     @media screen and (max-width: 600px) {
       figure {
         width: 50%;
-      } 
+      }
     }
+  }
+}
+
+.appear-from {
+  &-up, &-down, &-left, &-right {
+    opacity: 0;
+  }
+}
+
+@keyframes appear-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear-down {
+  0% {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-right {
+  0% {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

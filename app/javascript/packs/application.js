@@ -15,13 +15,39 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-window.onscroll = (event) =>  {
-  var top =   window.pageYOffset || document.documentElement.scrollTop;
-  let nav = document.querySelector("nav");
+document.addEventListener('turbolinks:load', function() {
+  const nav = document.querySelector("nav")
 
-  if(top > 100) {
-    nav.classList.add("white__nav");
-  } else {
-    nav.classList.remove("white__nav");
+  window.onscroll = () =>  {
+    let top =   window.pageYOffset || document.documentElement.scrollTop
+
+    if(top > 100) {
+      nav.classList.add("white__nav", "box__shadow")
+    } else {
+      nav.classList.remove("white__nav", "box__shadow")
+    }
   }
-};
+
+  function observeComponents(direction) {
+    for(let _i of document.querySelectorAll(`.appear-from-${direction}`)) {
+      let _delay = _i.getAttribute('slide-delay') || 125
+
+      _i.observer = new IntersectionObserver(e => {
+        if(e[0].isIntersecting) {
+          if(!_i.observed) {
+            _i.observed = true
+            _i.style.animation = `appear-${direction} 0.5s ease forwards ${_delay}ms`
+            if(_i.observer) _i.observer.unobserve(_i)
+          }
+        }
+      })
+
+      _i.observer.observe(_i)
+    }
+  }
+
+  observeComponents('up')
+  observeComponents('down')
+  observeComponents('right')
+  observeComponents('left')
+})
