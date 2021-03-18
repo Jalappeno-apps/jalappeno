@@ -1,4 +1,13 @@
 en:
+  metatags:
+    author: 'Jalappeno'
+    description: "Let's talk about your new business ideas"
+    title: 'Jalappeno'
+    keywords:
+      en_US: "let's talk about your new business ideas"
+      en_GB: "let's talk about your new business ideas"
+      pl: "let's talk about your new business ideas"
+
   navbar:
     about_us: about us
     team: team
