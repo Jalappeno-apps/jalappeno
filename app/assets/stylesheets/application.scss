@@ -184,6 +184,11 @@ body {
   cursor: asset-url('cursor-hover.svg') 20 0, auto;
 }
 
+.button.is-primary-white {
+  background-color: #fff !important;
+  border-radius: 15px;
+}
+
 .button-shadowed {
   &:hover {
     box-shadow: 6px 6px 5px #0003;
