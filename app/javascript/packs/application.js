@@ -28,27 +28,26 @@ document.addEventListener('turbolinks:load', function() {
     }
   }
 
-  function observeComponenets(direction) {
+  function observeComponents(direction) {
     for(let _i of document.querySelectorAll(`.appear-from-${direction}`)) {
       let _delay = _i.getAttribute('slide-delay') || 125
 
-      let observer = new IntersectionObserver(e => {
+      _i.observer = new IntersectionObserver(e => {
         if(e[0].isIntersecting) {
-          if(!_i.state) {
-            _i.state = true
-
-            let _style = _i.style
-            _style.animation = `appear-${direction} 0.5s ease forwards ${_delay}ms`
-            if(observer) observer.unobserve(_i)
+          if(!_i.observed) {
+            _i.observed = true
+            _i.style.animation = `appear-${direction} 0.5s ease forwards ${_delay}ms`
+            if(_i.observer) _i.observer.unobserve(_i)
           }
         }
       })
 
-      if(observer) observer.observe(_i)
+      _i.observer.observe(_i)
     }
   }
 
-  observeComponenets('up')
-  observeComponenets('left')
-
+  observeComponents('up')
+  observeComponents('down')
+  observeComponents('right')
+  observeComponents('left')
 })
