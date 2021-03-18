@@ -33,6 +33,41 @@ body {
   background: #28DD8B;
 }
 
+@media screen and (min-width: 1024px) {
+  /* line 4, node_modules/bulma/sass/elements/container.sass */
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  /* line 17, node_modules/bulma/sass/elements/container.sass */
+  .container.is-widescreen:not(.is-max-desktop) {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 1407px) {
+  /* line 20, node_modules/bulma/sass/elements/container.sass */
+  .container.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  /* line 23, node_modules/bulma/sass/elements/container.sass */
+  .container:not(.is-max-desktop) {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  /* line 26, node_modules/bulma/sass/elements/container.sass */
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1200px;
+  }
+}
+
 .chilli__background {
   position: absolute;
 
