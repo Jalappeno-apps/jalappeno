@@ -45,8 +45,6 @@ var last_section = new ScrollMagic.Scene({
       triggerElement: "#last-step",
 }).addTo(controller);
 
-console.log()
-
 export default class MyComponent extends Component {
   constructor(){
     super();

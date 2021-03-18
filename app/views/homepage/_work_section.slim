@@ -6,10 +6,11 @@ section.work.container id="how-we-work"
     h3.subtitle.has-text-centered.has-pt-5.has-mb-240.has-mb-72-touch = t 'work.subtitle', scope: i18n_scope 
     .work__section__inside.has-mb-180.has-mb-36-touch
       .columns.reverse-columns
-        .column.is-two-fifths
-          .step__image--first id="first_frame"
-        .column.is-one-fifth
-        .column.is-two-fifths
+        .column
+          .step_frame
+            = image_tag 'frame', class: 'frame appear-from-up'
+            = image_tag 'image_1', class: 'frame-image appear-from-left rellax', 'data-rellax-speed': "1"
+        .column
           .is-block.is-hidden-tablet
             = image_tag 'image_1_mobile', class: "margin-0-auto is-block is-hidden-tablet mb-4"
           .step__text
@@ -18,14 +19,12 @@ section.work.container id="how-we-work"
               .step__title.is-size-3.is-size-6-touch.is-inline-block = t 'work.step_1.meeting', scope: i18n_scope
             .step__number.has-pb-18.is-hidden-mobile = t 'work.step_1.step', scope: i18n_scope
             .step__title.is-size-3.is-size-4-touch.is-hidden-mobile = t 'work.step_1.meeting', scope: i18n_scope
-            .step__content.mt-5.spacer.s0 id="trigger1"
+            .step__content.mt-5
               p.is-black.mb-3 = t 'work.step_1.content.p1'.html_safe, scope: i18n_scope
               p.is-black.mb-3 = t 'work.step_1.content.p2'.html_safe, scope: i18n_scope
               p.is-black = t 'work.step_1.content.p3'.html_safe, scope: i18n_scope
-            .s0 id="trigger1"
 
-
-    .work__section__inside.has-mb-180.has-mb-36-touch
+    .work__section__inside.has-mb-36-touch
       .columns
         .column
           .is-block.is-hidden-tablet
@@ -49,11 +48,17 @@ section.work.container id="how-we-work"
               p
                 b = t('work.step_2.content.p3', scope: i18n_scope).html_safe
         .column
-        .s0 id="trigger2"
+          .step_frame
+            = image_tag 'frame', class: 'frame appear-from-up'
+            = image_tag 'image_2', class: 'frame-image appear-from-right'
 
     .work__section__inside.spacer.has-mb-180.has-mb-36-touch
       .columns.reverse-columns
         .column
+          .step_frame
+            = image_tag 'frame', class: 'frame appear-from-up'
+            = image_tag 'image_3', class: 'frame-image appear-from-left'
+
         .column
           .is-block.is-hidden-tablet
             = image_tag 'image_3_mobile', class: "margin-0-auto is-block has-text-centered is-hidden-tablet mb-4"
@@ -67,7 +72,6 @@ section.work.container id="how-we-work"
               p.is-black.mb-3 = t 'work.step_3.content.p1', scope: i18n_scope
               p.is-black.mb-3 = t 'work.step_3.content.p2', scope: i18n_scope
               p.is-black = t 'work.step_3.content.p3', scope: i18n_scope
-        .s0 id="trigger3"
 
     .work__section__inside.has-mb-36-touch
       .columns
@@ -83,5 +87,6 @@ section.work.container id="how-we-work"
             .step__content.mt-5
               p.is-black = t 'work.step_4.content.p1', scope: i18n_scope
         .column
-        .s0 id="trigger4"
-      #last-step.has-mt-36
+          .step_frame
+            = image_tag 'frame', class: 'frame appear-from-up'
+            = image_tag 'image_4', class: 'frame-image appear-from-right'
