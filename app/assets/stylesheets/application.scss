@@ -99,6 +99,9 @@ body {
     &__inside {
       min-height: 70vh;
     }
+    &__inside:last-child {
+      min-height: 60vh;
+    }
   }
 }
 
@@ -325,11 +328,10 @@ a:hover{
 
 /* Caption text */
 .text {
-  color: black;
+  color: #363636;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: -30px;
   width: 100%;
   text-align: center;
   font-weight: bold;
