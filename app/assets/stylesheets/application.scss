@@ -167,64 +167,6 @@ body {
   }
 }
 
-.singular {
-  transition: 500ms;
-
-  &:hover {
-    transition: 500ms;
-    transform: scale(1.1);
-    border: 1px solid map-get($jalappeno, 'green-140') !important;
-    cursor: asset-url('cursor-hover.svg'), auto;
-  }
-}
-
-.button:hover{
-  transition: 500ms;
-  text-decoration: none;
-  cursor: asset-url('cursor-hover.svg') 20 0, auto;
-}
-
-.button.is-primary-white {
-  background-color: #fff !important;
-  border-radius: 15px;
-}
-
-.button-shadowed {
-  &:hover {
-    box-shadow: 6px 6px 5px #0003;
-  }
-
-  &:active {
-    box-shadow: 4px 4px 4px #0003;
-  }
-}
-
-.button-fill-hover {
-  &, & .has-text-weight-light {
-    transition: 0ms;
-  }
-
-  &:hover {
-    background-color: #28DD8B;
-    transition: 500ms;
-
-    & .has-text-weight-light {
-      color: #fff !important;
-    }
-
-    &, &.has-text-weight-light {
-      transition: 500ms;
-    }
-  }
-}
-
-a:hover{
-  transition: 500ms;
-  text-decoration: none;
-  cursor: asset-url('cursor-hover.svg'), auto;
-  background-color: initial;
-}
-
 #contact,
 #development,
 #clients_opinion,
@@ -267,19 +209,6 @@ a:hover{
   }
 }
 
-.has-bg-green-100 {
-  transition: all 1s ease;
-}
-
-.has-text-on-bg-green-100 {
-  color: white;
-}
-
-.text-styles-on-bg-change {
-  color: white !important;
-  font-weight: bold;
-}
-
 .image_container {
   visibility:visible;
   opacity:1;
@@ -292,75 +221,26 @@ a:hover{
   transition: visibility 500ms linear,opacity 500ms linear;
 }
 
-.w-50 {
-  width: 50%;
-}
-
-.columns--development {
-  .column {
-    text-align: center;
-    figure {
-      width: 75%;
-      margin: 0 auto;
-    }
-    @media screen and (max-width: 600px) {
-      figure {
-        width: 50%;
-      }
-    }
+.step_frame {
+  position: relative;
+  height: 300px;
+  @extend .is-hidden-touch;
+  
+  .frame {
+    position: absolute;
+  }
+  .frame-image {
+    position: absolute;
+    bottom: -150px;
+    right: 30px;
   }
 }
 
-.appear-from {
-  &-up, &-down, &-left, &-right {
-    opacity: 0;
-  }
-}
+.client-opinion {
+  font-size: 3rem;
 
-@keyframes appear-up {
-  0% {
-    opacity: 0;
-    transform: translateY(-36px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes appear-down {
-  0% {
-    opacity: 0;
-    transform: translateY(36px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes appear-right {
-  0% {
-    opacity: 0;
-    transform: translateX(36px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes appear-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-36px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  @include touch {
+    font-size: 1.5rem;
+    line-height: 1.5 !important;
   }
 }

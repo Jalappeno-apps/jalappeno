@@ -3,10 +3,10 @@ en:
     hero:
       tagline: The most <span class='is-green-80'>customer oriented </span><br class='no-mob-br'/>digital agency in the world
       subtitle: Your digital success is our top priority.
-      book_meeting: book online meeting
+      book_meeting: Book a meeting!
     work:
-      visualize: Let’s visualize you our journey
-      subtitle: To make your project a success, we will go through the following processes together.
+      visualize: Let’s visualize your journey
+      subtitle: To make your project a success, we will go through the following journey together.
       step_1:
         step: Meeting & Consultancy
         meeting: Let’s talk about your needs
