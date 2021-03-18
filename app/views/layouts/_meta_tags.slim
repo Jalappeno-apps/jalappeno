@@ -1,14 +1,10 @@
-/ Fetched from translation
 meta charset="utf-8"
 meta name="description" content="#{t 'metatags.author'}"
 meta name="author" content="#{t 'metatags.author'}"
-meta name="keywords" lang="pl" content="#{t 'metatags.keywords.pl' }"
-meta name="keywords" lang="en-GB" content="#{t 'metatags.keywords.en_GB' }"
-meta name="keywords" lang="en-US" content="#{t 'metatags.keywords.en_US' }"
+meta name="keywords" lang="#{ I18n.locale }" content="#{t 'metatags.keywords' }"
 meta name="title" content="#{t 'metatags.title'}"
 meta property="og:description" content="#{t 'metatags.author'}"
 meta property="og:title" content="#{t 'metatags.title'}"
-/ Doesn't need translation
 meta property="og:type" content="website"
 meta property="og:url" content="#{request.original_url}"
 meta name="robots" content="all"

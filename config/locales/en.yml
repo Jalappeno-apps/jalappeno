@@ -1,20 +1,16 @@
 en:
   metatags:
     author: 'Jalappeno'
-    description: "Let's talk about your new business ideas"
+    description: "Let's talk about your new business ideas, Europe's most customer oriented software house specializing in bespoke application development and product design"
     title: 'Jalappeno'
-    keywords:
-      en_US: "let's talk about your new business ideas"
-      en_GB: "let's talk about your new business ideas"
-      pl: "let's talk about your new business ideas"
-
+    keywords: "web development, jalappeno, architecture design, consultation, business intelligence, design, rebranding"
   navbar:
     about_us: about us
     team: team
     clients: clients
     blog: blog
     contact: contact
-    call_now: zadzwoń
+    call_now: Zadzwoń
   footer:
     design: Design
     development: Development
