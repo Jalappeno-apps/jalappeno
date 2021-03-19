@@ -36,7 +36,7 @@
             .landing__reach-us.pt-6.pb-6.appear-from-up
                 = image_tag "email-icon.svg", class: "mt-3"
                 p.is-green-100.has-text-weight-semibold.mt-3 = "leave a message"
-                a.button.is-primary.button-shadowed.mt-3 href="mailto:hello@jalappeno.pl"
+                a.button.is-primary.button-shadowed.mt-3 href="#contact-us"
                     = "write e-mail"
         .column
             .landing__reach-us.pt-6.pb-6.appear-from-up
@@ -167,45 +167,46 @@
       .has-text-centered.appear-from-up.mb-6
             .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:530px"
 
-    h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
-        | contact
-        span.is-green-100   us
-    .appear-from-up
-      .columns.contact.mb-6
-        .column
-          .columns
-            .column.is-flex.is-justify-content-center
-              figure.image
-                = image_tag 'daiji.png', class: 'person is-rounded'
-            .column
-              h2.is-size-4.mb-4
-                | Daiji Kimura
-              p.mb-1
-                | CEO & Product Owner
-              p.mb-1
-                | +48 693-896-717
-              p.mb-1
-                daiji.kimura@jalappeno.pl
-          .columns
-            .column
-              p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
-        .column
-          input.mb-3.input[type="text" placeholder="Full name"]
-          input.mb-3.input[type="email" placeholder="Email"]
-          input.mb-3.input[type="tel" placeholder="Phone"]
-          textarea.mb-3.textarea[placeholder="Message"]
-          label.checkbox
-            input[type="checkbox"]
-            |  I need
-            span.is-green-80.is-bold
-              | NDA
-            |  first
-          label.checkbox
-            input[type="checkbox"]
-            |  I agree to the processing of personal data provided according to our
-            a style="cursor: pointer; display: block;" href="/privacy-policy" target="_blank"
+    #contact-us
+      h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
+          | contact
+          span.is-green-100   us
+      .appear-from-up
+        .columns.contact.mb-6
+          .column
+            .columns
+              .column.is-flex.is-justify-content-center
+                figure.image
+                  = image_tag 'daiji.png', class: 'person is-rounded'
+              .column
+                h2.is-size-4.mb-4
+                  | Daiji Kimura
+                p.mb-1
+                  | CEO & Product Owner
+                p.mb-1
+                  | +48 693-896-717
+                p.mb-1
+                  daiji.kimura@jalappeno.pl
+            .columns
+              .column
+                p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
+          .column
+            input.mb-3.input[type="text" placeholder="Full name"]
+            input.mb-3.input[type="email" placeholder="Email"]
+            input.mb-3.input[type="tel" placeholder="Phone"]
+            textarea.mb-3.textarea[placeholder="Message"]
+            label.checkbox
+              input[type="checkbox"]
+              |  I need
               span.is-green-80.is-bold
-                  | Privacy Policy
+                | NDA
+              |  first
+            label.checkbox
+              input[type="checkbox"]
+              |  I agree to the processing of personal data provided according to our
+              a style="cursor: pointer; display: block;" href="/privacy-policy" target="_blank"
+                span.is-green-80.is-bold
+                    | Privacy Policy
 
 .landing__footer
     .is-flex.is-justify-content-center.landing__footer__container
