@@ -1,6 +1,6 @@
 - i18n_scope = 'footer'
 
-footer.p-5
+footer
   .container
     .columns.has-text-centered.is-mobile.is-multiline
       .column.is-half-mobile.has-text-left
@@ -69,16 +69,18 @@ footer.p-5
           a href="tel:+48693896717" +48 693 896 717
         .footer__link Jalappeno Sp. z o.o.
     .columns.has-text-centered
-      .column.is-flex-desktop.is-justify-content-flex-end
-        a.ml-5 href="https://github.com/"
+      .column.is-flex-desktop.is-justify-content-flex-start
+        = image_tag "logo", alt: "jalappeno logo"
+      .column.is-flex-desktop.is-justify-content-flex-end.is-justify-content-center-mobile.no-footer-margin-mobile
+        a.m-2 href="https://github.com/"
           = image_tag 'github_icon.svg'
-        a.ml-5 href="https://www.behance.net/"
+        a.m-2 href="https://www.behance.net/"
           = image_tag 'behance_icon.svg'
-        a.ml-5 href="https://pl.linkedin.com/"
+        a.m-2 href="https://pl.linkedin.com/"
           = image_tag 'linkedin_icon.svg'
-        a.ml-5 href="https://www.facebook.com/"
+        a.m-2 href="https://www.facebook.com/"
           = image_tag 'facebook_icon.svg'
-        a.ml-5 href="https://www.instagram.com/"
+        a.m-2 href="https://www.instagram.com/"
           = image_tag 'instagram_icon.svg'
-        a.ml-5 href="https://dribbble.com/"
+        a.m-2 href="https://dribbble.com/"
           = image_tag 'dribble_icon.svg'

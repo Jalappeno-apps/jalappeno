@@ -249,3 +249,9 @@
     }
   }
 }
+
+.is-justify-content-center-mobile {
+  @include touch {
+    justify-content: center !important;
+  }
+}
