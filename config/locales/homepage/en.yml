@@ -49,3 +49,14 @@ en:
       ohs_industry: E-commerce for OHS industry
       dentist: Custom booking website for dentist
       cosmetic_salon: Website for cosmetic salon chain in Poland
+    team:
+      meet_our_team: Meet our team
+    contact:
+      paragraph_html: "My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!"
+      i_need: " I need "
+      first: " First "
+      personal_data: I agree to the processing of personal data provided according to
+      privacy_policy: Privacy Policy
+    clients:
+      header: "Client's opinion"
+      opinion: "This is a client's opinion as stated by the client when they gave their opinion to Jalappeno about Jalappeno, they are a..."

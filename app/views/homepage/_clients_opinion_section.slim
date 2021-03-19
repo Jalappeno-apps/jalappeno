@@ -1,12 +1,12 @@
-- i18n_scope = 'homepage.clients'
+- i18n_scope = 'homepage'
 
 section.clients.container.has-mt-72.has-mb-180 id="clients_opinion"
-  h1.is-green-80.title.has-text-centered = t 'opinion', scope: i18n_scope
+  h1.is-green-80.title.has-text-centered = t 'clients.header', scope: i18n_scope
   .container
 
-    h2.has-text-centered style="font-wieght: light; font-size: 40px; line-height: 4rem"
+    h2.has-text-centered style="font-wieght: light; font-size: 25px; line-height: 4rem"
       span.is-green-80 „
-      span.is-italic style="position: relative" This is a client's opinion as stated by the client when they gave their opinion to Jalappeno about Jalappeno, they are a...
+      span.is-italic = t 'clients.opinion', scope: i18n_scope
       span.is-green-80 “
     h3.is-size-3.has-text-centered.mt-5
       span.is-size-5.is-green-80.is-bold SmartLifeClinic
