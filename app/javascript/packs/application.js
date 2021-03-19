@@ -30,13 +30,13 @@ document.addEventListener('turbolinks:load', function() {
 
   function observeComponents(direction) {
     for(let _i of document.querySelectorAll(`.appear-from-${direction}`)) {
-      let _delay = _i.getAttribute('slide-delay') || 125
+      let _delay = _i.getAttribute('slide-delay') || 250
 
       _i.observer = new IntersectionObserver(e => {
         if(e[0].isIntersecting) {
           if(!_i.observed) {
             _i.observed = true
-            _i.style.animation = `appear-${direction} 0.5s ease forwards ${_delay}ms`
+            _i.style.animation = `appear-${direction} 1s ease forwards ${_delay}ms`
             if(_i.observer) _i.observer.unobserve(_i)
           }
         }
