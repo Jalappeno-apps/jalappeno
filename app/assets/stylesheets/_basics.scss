@@ -1,8 +1,12 @@
 html, body {
   @extend .is-body-16;
   scroll-behavior: smooth;
-  cursor: asset-url('cursor.svg'), auto;
+  cursor: asset-url('cursor-soft-shadowed.svg') 28 5, auto;
   transition: background 1s ease;
+}
+
+input.input, textarea.textarea {
+  cursor: asset-url('cursor-soft-shadowed-edit.svg') 30 5, auto;
 }
 
 a {
@@ -33,7 +37,7 @@ a {
   background-color: map-get($jalappeno, 'purple-130');
   color: white;
 
-  
+
 }
 
 .box.is-hoverable:hover .hover-white {
@@ -130,9 +134,9 @@ a {
 }
 
 .is-fullheight {
-  height: 100% !important; 
+  height: 100% !important;
 }
 
 .is-fullpage {
-  height: 100vh !important; 
+  height: 100vh !important;
 }

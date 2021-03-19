@@ -31,6 +31,7 @@ body {
 ::selection {
   color: white;
   background: #28DD8B;
+  text-shadow: 2px 2px 1px #0001 ;
 }
 
 @media screen and (min-width: 1024px) {
@@ -147,7 +148,7 @@ body {
   z-index: 6;
   overflow: hidden !important;
 
-  .hero__box { 
+  .hero__box {
     @extend .is-fullheight;
   }
 
@@ -201,32 +202,6 @@ body {
   }
 }
 
-.singular {
-  transition: 500ms;
-
-  &:hover {
-    transition: 500ms;
-    transform: scale(1.1);
-    border: 1px solid map-get($jalappeno, 'green-140') !important;
-    cursor: asset-url('cursor-hover.svg'), auto;
-  }
-}
-
-.button:hover{
-  transition: 500ms;
-  text-decoration: none;
-  cursor: asset-url('cursor-hover.svg'), auto;
-  background-color: initial;
-}
-
-
-a:hover{
-  transition: 500ms;
-  text-decoration: none;
-  cursor: asset-url('cursor-hover.svg'), auto;
-  background-color: initial;
-}
-
 #contact,
 #development,
 #clients_opinion,
@@ -254,32 +229,19 @@ a:hover{
       color: #767676 !important;
       opacity: 1 !important; /* Firefox */
     }
-    
+
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
       color: #767676 !important;
     }
-    
+
     &::-ms-input-placeholder { /* Microsoft Edge */
       color: #767676 !important;
     }
   }
-  
+
   .person {
     border: 15px solid $primary;
   }
-}
-
-.has-bg-green-100 {
-  transition: all 1s ease;
-}
-
-.has-text-on-bg-green-100 {
-  color: white;
-}
-
-.text-styles-on-bg-change {
-  color: white !important;
-  font-weight: bold;
 }
 
 .image_container {
@@ -294,8 +256,19 @@ a:hover{
   transition: visibility 500ms linear,opacity 500ms linear;
 }
 
-.w-50 {
-  width: 50%;
+.step_frame {
+  position: relative;
+  height: 300px;
+  @extend .is-hidden-touch;
+  
+  .frame {
+    position: absolute;
+  }
+  .frame-image {
+    position: absolute;
+    bottom: -150px;
+    right: 30px;
+  }
 }
 
 .w-75 {
@@ -314,6 +287,12 @@ a:hover{
         width: 50%;
       } 
     }
+.client-opinion {
+  font-size: 3rem;
+
+  @include touch {
+    font-size: 1.5rem;
+    line-height: 1.5 !important;
   }
 }
 

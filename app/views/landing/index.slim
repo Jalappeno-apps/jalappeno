@@ -27,28 +27,28 @@
             p.mb-3 = "As CEO of software company, I'd love to meet your needs and show you how you can get more sales, save time and provide better customer service with our solutions. Pick up the most comfortable way for you to reach out to me"
     .columns
         .column
-            .landing__reach-us.pt-6.pb-6
+            .landing__reach-us.pt-6.pb-6.appear-from-up
                 = image_tag "phone-icon.svg", class: "mt-3"
                 p.is-green-100.has-text-weight-semibold.mt-3 = "call me now!"
-                a.button.is-primary.mt-3 href="tel:+48693896717"
-                    = "call now" 
+                a.button.is-primary.button-shadowed.mt-3 href="tel:+48693896717"
+                    = "call now"
         .column
-            .landing__reach-us.pt-6.pb-6
+            .landing__reach-us.pt-6.pb-6.appear-from-up
                 = image_tag "email-icon.svg", class: "mt-3"
                 p.is-green-100.has-text-weight-semibold.mt-3 = "leave a message"
-                a.button.is-primary.mt-3 href="mailto:hello@jalappeno.pl"
+                a.button.is-primary.button-shadowed.mt-3 href="mailto:hello@jalappeno.pl"
                     = "write e-mail"
         .column
-            .landing__reach-us.pt-6.pb-6
+            .landing__reach-us.pt-6.pb-6.appear-from-up
                 = image_tag "calendar-icon.svg", class: "mt-3"
                 p.is-green-100.has-text-weight-semibold.mt-3 = "book a meeting"
-                a.button.is-primary.mt-3 href="mailto:hello@jalappeno.pl"
+                a.button.is-primary.button-shadowed.mt-3 href="#book-meeting"
                     = "choose a date"
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mt-6
         | why would you
-        span.is-green-100  contact 
+        span.is-green-100  contact
         | us?
-    .columns.pt-6.mt-6
+    .columns.pt-6.mt-6.appear-from-up
         .column.is-flex.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
             = image_tag "consultancy.png"
             span.is-block.is-black.mt-3.has-text-weight-medium = "You will get fresh ideas and consultancy for free."
@@ -61,152 +61,163 @@
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
         | our team is waiting for
         span.is-green-100  you
-    .columns.is-mobile.is-hidden-touch
-        .column.is-2.is-offset-5.has-text-centered
-            figure.image
-                = image_tag "you.png"
-            p.is-size-4.mt-3.is-green-100.has-text-weight-semibold = "You"
-    .columns.is-mobile.is-hidden-touch
-        .column.is-2.is-offset-2.has-text-centered
-            figure.image
-                = image_tag "jules-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Julia Kostrzewa"
-            p.is-size-6.is-black.has-text-weight-medium = "Art Director"
-        .column.is-2.is-offset-1.has-text-centered
-            figure.image
-                = image_tag "daiji-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Daiji Kimura"
-            p.is-size-6.is-black.has-text-weight-medium = "CEO"
-        .column.is-2.is-offset-1.has-text-centered
-            figure.image
-                = image_tag "ritwick-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Ritwick Malhotra"
-            p.is-size-6.is-black.has-text-weight-medium = "CTO"
-    .columns.is-mobile.is-hidden-touch
-        .column.is-2.is-offset-3.has-text-centered
-            figure.image
-                = image_tag "alan-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Alan Pieczonka"
-            p.is-size-6.is-black.has-text-weight-medium = "Front-end Developer"
-        .column.is-2.is-offset-2.has-text-centered
-            figure.image
-                = image_tag "sourav-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Sourav Goswami"
-            p.is-size-6.is-black.has-text-weight-medium = "Back-end Developer"
-    .columns.is-mobile.is-hidden-desktop
-        .column.is-4.is-offset-4.has-text-centered
-            figure.image
-                = image_tag "you.png"
-            p.is-size-4.mt-3.is-green-100.has-text-weight-semibold = "You"
-    .columns.is-mobile.is-hidden-desktop
-        .column.is-4.has-text-centered
-            figure.image
-                = image_tag "jules-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Julia Kostrzewa"
-            p.is-size-6.is-black.has-text-weight-medium = "Art Director"
-        .column.is-4.has-text-centered
-            figure.image
-                = image_tag "daiji-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Daiji Kimura"
-            p.is-size-6.is-black.has-text-weight-medium = "CEO"
-        .column.is-4.has-text-centered
-            figure.image
-                = image_tag "ritwick-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Ritwick Malhotra"
-            p.is-size-6.is-black.has-text-weight-medium = "CTO"
-    .columns.is-mobile.is-hidden-desktop
-        .column.is-4.is-offset-1.has-text-centered
-            figure.image
-                = image_tag "alan-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Alan Pieczonka"
-            p.is-size-6.is-black.has-text-weight-medium = "Front-end Developer"
-        .column.is-4.is-offset-1.has-text-centered
-            figure.image
-                = image_tag "sourav-rounded.png"
-            p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Sourav Goswami"
-            p.is-size-6.is-black.has-text-weight-medium = "Back-end Developer"
+    .appear-from-up
+        .columns.is-mobile.is-hidden-touch
+            .column.is-2.is-offset-5.has-text-centered
+                figure.image
+                    = image_tag "you.png"
+                p.is-size-4.mt-3.is-green-100.has-text-weight-semibold = "You"
+        .columns.is-mobile.is-hidden-touch
+            .column.is-2.is-offset-2.has-text-centered
+                figure.image
+                    = image_tag "jules-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Julia Kostrzewa"
+                p.is-size-6.is-black.has-text-weight-medium = "Art Director"
+            .column.is-2.is-offset-1.has-text-centered
+                figure.image
+                    = image_tag "daiji-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Daiji Kimura"
+                p.is-size-6.is-black.has-text-weight-medium = "CEO"
+            .column.is-2.is-offset-1.has-text-centered
+                figure.image
+                    = image_tag "ritwick-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Ritwick Malhotra"
+                p.is-size-6.is-black.has-text-weight-medium = "CTO"
+        .columns.is-mobile.is-hidden-touch
+            .column.is-2.is-offset-3.has-text-centered
+                figure.image
+                    = image_tag "alan-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Alan Pieczonka"
+                p.is-size-6.is-black.has-text-weight-medium = "Front-end Developer"
+            .column.is-2.is-offset-2.has-text-centered
+                figure.image
+                    = image_tag "sourav-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Sourav Goswami"
+                p.is-size-6.is-black.has-text-weight-medium = "Back-end Developer"
+
+    .appear-from-up
+        .columns.is-mobile.is-hidden-desktop
+            .column.is-4.is-offset-4.has-text-centered
+                figure.image
+                    = image_tag "you.png"
+                p.is-size-4.mt-3.is-green-100.has-text-weight-semibold = "You"
+        .columns.is-mobile.is-hidden-desktop
+            .column.is-4.has-text-centered
+                figure.image
+                    = image_tag "jules-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Julia Kostrzewa"
+                p.is-size-6.is-black.has-text-weight-medium = "Art Director"
+            .column.is-4.has-text-centered
+                figure.image
+                    = image_tag "daiji-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Daiji Kimura"
+                p.is-size-6.is-black.has-text-weight-medium = "CEO"
+            .column.is-4.has-text-centered
+                figure.image
+                    = image_tag "ritwick-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Ritwick Malhotra"
+                p.is-size-6.is-black.has-text-weight-medium = "CTO"
+        .columns.is-mobile.is-hidden-desktop
+            .column.is-4.is-offset-1.has-text-centered
+                figure.image
+                    = image_tag "alan-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Alan Pieczonka"
+                p.is-size-6.is-black.has-text-weight-medium = "Front-end Developer"
+            .column.is-4.is-offset-1.has-text-centered
+                figure.image
+                    = image_tag "sourav-rounded.png"
+                p.is-size-6.is-black.has-text-weight-semibold.mt-3 = "Sourav Goswami"
+                p.is-size-6.is-black.has-text-weight-medium = "Back-end Developer"
 
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mt-6
         | check what others say about
         span.is-green-100   us
-    .columns.mt-6 
-        .column.has-text-centered
-            i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-            figure.image.margin-auto.mt-6
-                = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-            p.is-black.has-text-weight-semibold.mt-3 = "Katarzyna Cedzyńska, Project Manager"
-            p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
-        .column.has-text-centered
-            i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-            figure.image.margin-auto.mt-6
-                = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-            p.is-black.has-text-weight-semibold.mt-3 = "Martyna Kubicka, Operation Director"
-            p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
-    .columns.mt-6
-        .column.has-text-centered
-            i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-            figure.image.margin-auto.mt-6
-                = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-            p.is-black.has-text-weight-semibold.mt-3 = "Paweł Tyburski, Co-founder"
-            p.is-green-100.has-text-weight-semibold = "HempChamp"
-        .column.has-text-centered
-            i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-            figure.image.margin-auto.mt-6
-                = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-            p.is-black.has-text-weight-semibold.mt-3 = "Karolina Czerwonka, Co-founder"
-            p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
-    h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
-        span.is-green-100 book a 
-        |  meeting
-    .has-text-centered
-        = image_tag "calendar.png"
+    .appear-from-up
+        .columns.mt-6
+            .column.has-text-centered
+                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
+                figure.image.margin-auto.mt-6
+                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
+                p.is-black.has-text-weight-semibold.mt-3 = "Katarzyna Cedzyńska, Project Manager"
+                p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
+            .column.has-text-centered
+                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
+                figure.image.margin-auto.mt-6
+                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
+                p.is-black.has-text-weight-semibold.mt-3 = "Martyna Kubicka, Operation Director"
+                p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
+        .columns.mt-6
+            .column.has-text-centered
+                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
+                figure.image.margin-auto.mt-6
+                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
+                p.is-black.has-text-weight-semibold.mt-3 = "Paweł Tyburski, Co-founder"
+                p.is-green-100.has-text-weight-semibold = "HempChamp"
+            .column.has-text-centered
+                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
+                figure.image.margin-auto.mt-6
+                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
+                p.is-black.has-text-weight-semibold.mt-3 = "Karolina Czerwonka, Co-founder"
+                p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
+
+    #book-meeting
+      h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
+          span.is-green-100 book a
+          |  meeting
+      .has-text-centered.appear-from-up.mb-6
+            .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:530px"
+
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
         | contact
         span.is-green-100   us
-    .columns.contact.mb-6
-      .column
-        .columns
-          .column.is-flex.is-justify-content-center
-            figure.image
-              = image_tag 'daiji.png', class: 'person is-rounded'
-          .column
-            h2.is-size-4.mb-4
-              | Daiji Kimura
-            p.mb-1
-              | CEO & Product Owner
-            p.mb-1
-              | +48 693-896-717
-            p.mb-1
-              daiji.kimura@jalappeno.pl
-        .columns
-          .column
-            p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
-      .column
-        input.mb-3.input[type="text" placeholder="Full name"]
-        input.mb-3.input[type="email" placeholder="Email"]
-        input.mb-3.input[type="tel" placeholder="Phone"]
-        textarea.mb-3.textarea[placeholder="Message"]
-        label.checkbox
-          input[type="checkbox"]
-          |  I need 
-          span.is-green-80.is-bold
-            | NDA
-          |  first
-        label.checkbox
-          input[type="checkbox"]
-          |  I agree to the processing of personal data provided according to our
-          a style="cursor: pointer; display: block;" href="/privacy-policy" target="_blank"
+    .appear-from-up
+      .columns.contact.mb-6
+        .column
+          .columns
+            .column.is-flex.is-justify-content-center
+              figure.image
+                = image_tag 'daiji.png', class: 'person is-rounded'
+            .column
+              h2.is-size-4.mb-4
+                | Daiji Kimura
+              p.mb-1
+                | CEO & Product Owner
+              p.mb-1
+                | +48 693-896-717
+              p.mb-1
+                daiji.kimura@jalappeno.pl
+          .columns
+            .column
+              p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
+        .column
+          input.mb-3.input[type="text" placeholder="Full name"]
+          input.mb-3.input[type="email" placeholder="Email"]
+          input.mb-3.input[type="tel" placeholder="Phone"]
+          textarea.mb-3.textarea[placeholder="Message"]
+          label.checkbox
+            input[type="checkbox"]
+            |  I need
             span.is-green-80.is-bold
-                | Privacy Policy
+              | NDA
+            |  first
+          label.checkbox
+            input[type="checkbox"]
+            |  I agree to the processing of personal data provided according to our
+            a style="cursor: pointer; display: block;" href="/privacy-policy" target="_blank"
+              span.is-green-80.is-bold
+                  | Privacy Policy
+
 .landing__footer
     .is-flex.is-justify-content-center.landing__footer__container
-        a.button.is-primary.mt-3.mr-3.mb-5 href="tel:+48693896717" style="border: 1px solid white;"
+        a.button.is-primary.mt-3.mr-3.mb-5.button-shadowed href="tel:+48693896717" style="border: 1px solid white;"
             = "call now"
-        a.button.is-primary.mt-3.is-green-100.has-bg-white href="+48 693-896-717" style="color: #28DD8B !important;"
+        a.button.is-primary-white.mt-3.button-shadowed.button-hover-white href="#book-meeting" style="color: #28DD8B !important;"
             = "book meeting"
     p.is-white.has-text-centered = "Designed and developed by jalappeno © 2021"
     .is-flex.is-justify-content-center.pt-3.pb-5
         a.is-white.mr-3 style="cursor: pointer;" href="/privacy-policy" target="_blank"
             = "privacy policy"
         a.is-white style="cursor: pointer;" href="/terms-of-service" target="_blank"
-            = "terms of service" 
+            = "terms of service"
+
+script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

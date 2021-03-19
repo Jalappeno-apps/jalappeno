@@ -3,4 +3,3 @@ class LandingController < ApplicationController
     render
   end
 end
-  
