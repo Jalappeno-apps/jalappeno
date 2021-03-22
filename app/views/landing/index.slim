@@ -161,14 +161,25 @@
                 p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
 
     #book-meeting
-      h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
-          span.is-green-100 book a
-          |  meeting
-      .has-text-centered.appear-from-up.mb-6
-            .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:530px"
+        h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
+            span.is-green-100 book a
+                |  meeting
+
+        / Shown in tablet
+        .is-hidden-mobile.is-hidden-desktop
+            .has-text-centered.appear-from-up.mb-6
+                .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:560px"
+        / Shown in mobile
+        .is-hidden-tablet
+            .has-text-centered.appear-from-up.mb-6
+                .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:660px"
+        / For desktops and wide screens
+        .is-hidden-touch
+            .has-text-centered.appear-from-up
+                .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:650px"
 
     #contact-us
-      h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
+      h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.mb-6
           | contact
           span.is-green-100   us
       .appear-from-up
