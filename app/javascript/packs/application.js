@@ -18,7 +18,7 @@ require("channels")
 document.addEventListener('turbolinks:load', function() {
   const nav = document.querySelector("nav")
 
-  window.onscroll = () =>  {
+  styleNavbar = function() {
     let top =   window.pageYOffset || document.documentElement.scrollTop
 
     if(top > 100) {
@@ -27,6 +27,9 @@ document.addEventListener('turbolinks:load', function() {
       nav.classList.remove("white__nav", "box__shadow")
     }
   }
+
+  window.onscroll = () =>  styleNavbar()
+  styleNavbar()
 
   function observeComponents(direction) {
     for(let _i of document.querySelectorAll(`.appear-from-${direction}`)) {
@@ -58,9 +61,8 @@ document.addEventListener('turbolinks:load', function() {
 
     if (button) {
       let attributes = button.getAttribute('toggle-class').split(' ')
-      console.log(attributes)
 
-      _i.onclick = function() {
+      let buttonToggler = () => {
         if(_i.checked) {
           button.classList.remove('button-disabled')
           button.classList.add(...attributes)
@@ -68,8 +70,11 @@ document.addEventListener('turbolinks:load', function() {
           button.classList.add('button-disabled')
           button.classList.remove(...attributes)
         }
-
       }
+
+      _i.onclick = () => buttonToggler()
+      buttonToggler()
+
     } // endof if (button) {...}
   }   // endof for loop and disabled submit button
 
