@@ -51,7 +51,7 @@ document.addEventListener('turbolinks:load', function() {
   observeComponents('right')
   observeComponents('left')
 
-  // Toggle disabled out submit button
+  // Toggle disabled submit button
   for(let _i of document.querySelectorAll('.link-button')) {
     let buttonId = _i.getAttribute('button-id')
     let button = document.getElementById(buttonId)
@@ -70,6 +70,7 @@ document.addEventListener('turbolinks:load', function() {
         }
 
       }
-    }
-  }
+    } // endof if (button) {...}
+  }   // endof for loop and disabled submit button
+
 })

@@ -17,6 +17,20 @@
 @import "landing";
 @import "projects";
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.has-sticky-footer {
+  flex: 1;
+}
+
 body {
   background: $primarybackground;
   font-family: $text-display;
