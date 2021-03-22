@@ -50,4 +50,30 @@ document.addEventListener('turbolinks:load', function() {
   observeComponents('down')
   observeComponents('right')
   observeComponents('left')
+
+  // Toggle disabled out submit button
+  for(let _i of document.querySelectorAll('.link-button')) {
+    let buttonId = _i.getAttribute('button-id')
+    let button = document.getElementById(buttonId)
+
+    // _i.onclick = function() {
+    //   console.log(button)
+    // }
+
+    if (button) {
+      let attributes = button.getAttribute('toggle-class').split(' ')
+      console.log(attributes)
+
+      _i.onclick = function() {
+        if(_i.checked) {
+          button.classList.remove('button-disabled')
+          button.classList.add(...attributes)
+        } else {
+          button.classList.add('button-disabled')
+          button.classList.remove(...attributes)
+        }
+
+      }
+    }
+  }
 })

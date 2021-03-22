@@ -311,6 +311,25 @@ a:hover{
   }
 }
 
+.right-align {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-disabled {
+  background-color: #aaa !important;
+  color: #fafafa;
+  border-radius: 15px;
+  cursor: not-allowed;
+
+  &:hover {
+    color: #fafafa;
+    background-color: #aaa !important;
+    cursor: not-allowed;
+  }
+}
+
 .appear-from {
   &-up, &-down, &-left, &-right {
     opacity: 0;

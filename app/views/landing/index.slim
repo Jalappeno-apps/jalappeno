@@ -213,11 +213,13 @@
                 | NDA
               |  first
             label.checkbox
-              input[type="checkbox"]
-              |  I agree to the processing of personal data provided according to our
-              a style="cursor: pointer; display: block;" href="/privacy-policy" target="_blank"
+              input[type="checkbox" class="link-button" button-id="button-submit"]
+              |  I agree to the processing of personal data provided according to our &nbsp;
+              a style="cursor: pointer;display:inline-block" href="/privacy-policy" target="_blank" rel="noopener"
                 span.is-green-80.is-bold
                     | Privacy Policy
+            .right-align.mt-5
+                button#button-submit.button.button-disabled toggle-class="is-primary button-shadowed" Submit
 
 .landing__footer
     .is-flex.is-justify-content-center.landing__footer__container
