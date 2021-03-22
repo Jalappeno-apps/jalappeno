@@ -34,38 +34,6 @@ $jalappeno: (
   "gray-pop-140": #32292b,
   "gray-pop-150": #1f191b,
 
-  "lilac-10": #f5eff3,
-  "lilac-20": #f4d1e5,
-  "lilac-30": #f3b7db,
-  "lilac-40": #ee98c6,
-  "lilac-50": #e57bb2,
-  "lilac-60": #de609d,
-  "lilac-70": #d64c8a,
-  "lilac-80": #ce3b79,
-  "lilac-90": #b8356e,
-  "lilac-100": #a43164,
-  "lilac-110": #902a58,
-  "lilac-120": #7b254c,
-  "lilac-130": #641e3d,
-  "lilac-140": #4c152d,
-  "lilac-150": #300e1c,
-
-  "lilac-pop-10": #feecf7,
-  "lilac-pop-20": #fccde9,
-  "lilac-pop-30": #fbb3de,
-  "lilac-pop-40": #f594c9,
-  "lilac-pop-50": #ec76b4,
-  "lilac-pop-60": #e55a9f,
-  "lilac-pop-70": #dc458b,
-  "lilac-pop-80": #d43279,
-  "lilac-pop-90": #bd2d6e,
-  "lilac-pop-100": #a92a64,
-  "lilac-pop-110": #942458,
-  "lilac-pop-120": #7f204c,
-  "lilac-pop-130": #671a3d,
-  "lilac-pop-140": #4e122d,
-  "lilac-pop-150": #320c1c,
-
   "red-10": #f3eff0,
   "red-20": #f4cdd8,
   "red-30": #f5b0c4,
@@ -98,38 +66,6 @@ $jalappeno: (
   "red-pop-140": #570f1b,
   "red-pop-150": #390912,
 
-  "peach-10": #f6f6f6,
-  "peach-20": #f5e6dc,
-  "peach-30": #f6d7c4,
-  "peach-40": #f6c0a6,
-  "peach-50": #f5aa89,
-  "peach-60": #f5916c,
-  "peach-70": #f57d56,
-  "peach-80": #f46a43,
-  "peach-90": #d8603c,
-  "peach-100": #bf5738,
-  "peach-110": #a74e30,
-  "peach-120": #8f422a,
-  "peach-130": #753522,
-  "peach-140": #582718,
-  "peach-150": #38190f,
-
-  "peach-pop-10": #fef4ee,
-  "peach-pop-20": #fee4d3,
-  "peach-pop-30": #fed5bb,
-  "peach-pop-40": #fdbd9e,
-  "peach-pop-50": #fca782,
-  "peach-pop-60": #fb8e65,
-  "peach-pop-70": #fa7950,
-  "peach-pop-80": #f9663d,
-  "peach-pop-90": #dc5d37,
-  "peach-pop-100": #c35433,
-  "peach-pop-110": #ab4b2c,
-  "peach-pop-120": #924026,
-  "peach-pop-130": #78331f,
-  "peach-pop-140": #5a2616,
-  "peach-pop-150": #3a180d,
-
   "tangerine-10": #fcfbf6,
   "tangerine-20": #fcf4d4,
   "tangerine-30": #fceeb7,
@@ -161,38 +97,6 @@ $jalappeno: (
   "tangerine-pop-130": #775015,
   "tangerine-pop-140": #583b0f,
   "tangerine-pop-150": #392509,
-
-  "yellow-10": #fdfdf0,
-  "yellow-20": #fefcc8,
-  "yellow-30": #fefaa5,
-  "yellow-40": #fdf681,
-  "yellow-50": #fbef63,
-  "yellow-60": #f8e846,
-  "yellow-70": #f6e135,
-  "yellow-80": #f5da2a,
-  "yellow-90": #d9c225,
-  "yellow-100": #c1ad21,
-  "yellow-110": #a8981d,
-  "yellow-120": #908218,
-  "yellow-130": #776b13,
-  "yellow-140": #584f0e,
-  "yellow-150": #393307,
-
-  "yellow-pop-10": #fefee6,
-  "yellow-pop-20": #fefdbd,
-  "yellow-pop-30": #fefb9a,
-  "yellow-pop-40": #fdf675,
-  "yellow-pop-50": #fbef56,
-  "yellow-pop-60": #f8e836,
-  "yellow-pop-70": #f6e122,
-  "yellow-pop-80": #f5da12,
-  "yellow-pop-90": #d9c210,
-  "yellow-pop-100": #c1ad0e,
-  "yellow-pop-110": #a8980d,
-  "yellow-pop-120": #90820b,
-  "yellow-pop-130": #776b09,
-  "yellow-pop-140": #584f07,
-  "yellow-pop-150": #393303,
 
   "green-10": #eafcf3,
   "green-20": #d4f8e8,
@@ -267,7 +171,7 @@ $success: map-get($jalappeno, 'green-80');
 $warning: map-get($jalappeno, 'tangerine-80');
 $danger: map-get($jalappeno, 'red-80');
 
-@each $color in gray, lilac, red, peach, tangerine, yellow, green, blue, brown, purple {
+@each $color in gray, red, tangerine, yellow, green, blue {
   @for $i from 1 through 15 {
     .is-#{"" + $color}-#{$i * 10} {
       color: map-get($jalappeno, $color + '-#{$i * 10}');
@@ -280,10 +184,6 @@ $danger: map-get($jalappeno, 'red-80');
     .has-bg-#{"" + $color}-#{$i * 10} {
       background-color: map-get($jalappeno, $color + '-#{$i * 10}') !important;
     }
-
-    //.has-bg-#{"" + $color}-#{$i * 10}-half {
-    //  background-color: rgba(map-get($management, $color + '-#{$i * 10}'), 0.5) !important;
-    //}
 
     .has-bg-#{"" + $color}-pop-#{$i * 10} {
       background-color: map-get($jalappeno, $color + '-pop-#{$i * 10}') !important;
@@ -301,4 +201,17 @@ $danger: map-get($jalappeno, 'red-80');
 
 .is-black {
   color: black;
+}
+
+.has-bg-green-100 {
+  transition: all 1s ease;
+}
+
+.has-text-on-bg-green-100 {
+  color: white;
+}
+
+.text-styles-on-bg-change {
+  color: white !important;
+  font-weight: bold;
 }

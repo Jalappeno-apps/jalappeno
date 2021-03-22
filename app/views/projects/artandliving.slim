@@ -1,3 +1,5 @@
+- i18n_scope = 'projects'
+
 section.pt-6.mt-6
     .container.project.is-black
         .project__banner.has-text-centered
@@ -13,7 +15,7 @@ section.pt-6.mt-6
             .column.column--project__points
                 .has-text-left.project__points__icon
                     = image_tag "team-icon.png"
-                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Team"
+                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = t 'team', scope: i18n_scope
                 div.project__points__container
                     ul
                         li = "Product Owner"
@@ -22,7 +24,7 @@ section.pt-6.mt-6
                         li = "Front-end developer"
                 .has-text-left.project__points__icon.mt-3
                     = image_tag "tech-stack-icon.png"
-                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = "Tech stack"
+                    h6.is-size-4.is-size-5-mobile.is-green-100.has-text-weight-semibold = t 'tech_stack', scope: i18n_scope
                 div.project__points__container
                     ul
                         li = "Figma"

@@ -56,10 +56,6 @@ document.addEventListener('turbolinks:load', function() {
     let buttonId = _i.getAttribute('button-id')
     let button = document.getElementById(buttonId)
 
-    // _i.onclick = function() {
-    //   console.log(button)
-    // }
-
     if (button) {
       let attributes = button.getAttribute('toggle-class').split(' ')
       console.log(attributes)

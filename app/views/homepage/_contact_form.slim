@@ -1,5 +1,7 @@
+- i18n_scope = 'homepage'
+
 section.contact.has-mt-120.mt-6-touch id="contact"
-  h1.title.has-text-centered.mb-6 contact us with NDA
+  h1.title.has-text-centered.mb-6 = t 'contact.contact_us_with_nda', scope: i18n_scope
   .container
     .columns
       .column
@@ -18,7 +20,7 @@ section.contact.has-mt-120.mt-6-touch id="contact"
               daiji.kimura@jalappeno.pl
         .columns
           .column
-            p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
+            p = t 'contact.paragraph_html', scope: i18n_scope
       .column
         input.mb-3.input[type="text" placeholder="Full name"]
         input.mb-3.input[type="email" placeholder="Email"]
@@ -26,12 +28,12 @@ section.contact.has-mt-120.mt-6-touch id="contact"
         textarea.mb-3.textarea[placeholder="Message"]
         label.checkbox
           input[type="checkbox"]
-          |  I need
+            = t 'contact.i_need', scope: i18n_scope
           span.is-green-80.is-bold
             | NDA
-          |  first
+          = t 'contact.first', scope: i18n_scope
         label.checkbox
           input[type="checkbox"]
-          |  I agree to the processing of personal data provided according to
+          = t 'contact.personal_data', scope: i18n_scope
           span.is-green-80.is-bold
-            | Privacy Policy
+            = t 'contact.privacy_policy', scope: i18n_scope

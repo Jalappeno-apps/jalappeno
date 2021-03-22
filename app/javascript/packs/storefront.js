@@ -1,4 +1,3 @@
-console.log('test')
 window.onscroll = (event) =>  {
     var top =   window.pageYOffset || document.documentElement.scrollTop;
     let nodes = document.querySelectorAll("nav");
@@ -23,7 +22,7 @@ window.onscroll = (event) =>  {
 
   document.addEventListener("turbolinks:load", () => {
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    console.log($navbarBurgers)
+
     if ($navbarBurgers.length > 0) {
       $navbarBurgers.forEach( el => {
         el.addEventListener('click', () => {

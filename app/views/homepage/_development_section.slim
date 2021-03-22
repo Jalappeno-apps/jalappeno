@@ -1,5 +1,7 @@
+- i18n_scope = 'homepage'
+
 section.has-mt-120.has-mt-6-touch id="development"
-  h1.title.has-text-centered.mb-6 Meet our team
+  h1.title.has-text-centered.mb-6 = t 'team.meet_our_team', scope: i18n_scope
   .container
     .columns.columns--development
       .column

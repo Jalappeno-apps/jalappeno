@@ -2,8 +2,8 @@
 
 footer
   .container
-    .columns.has-text-centered
-      .column.has-text-left
+    .columns.has-text-centered.is-mobile.is-multiline
+      .column.is-half-mobile.has-text-left
         h1.subtitle.footer__subtitle.has-mb-60 = t 'design', scope: i18n_scope
         .footer__link
           a href="#" Project UX
@@ -17,7 +17,7 @@ footer
           a href="#" Projects
         .footer__link
           a href="#" Products
-      .column.has-text-left
+      .column.is-half-mobile.has-text-left
         h1.subtitle.footer__subtitle.has-mb-60 = t 'development', scope: i18n_scope 
         .footer__link
           a href="#" Ruby On Rails
@@ -31,7 +31,7 @@ footer
           a href="#" IOT
         .footer__link
           a href="#" Python
-      .column.has-text-left
+      .column.is-half-mobile.has-text-left
         h1.subtitle.footer__subtitle.has-mb-60 = t 'projects', scope: i18n_scope
         .footer__link
           a href="/projects/smartlifeclinic" Smartlife Clinic
@@ -47,7 +47,7 @@ footer
           a href="/projects/bhpartykuly" BHP Artykuly
         .footer__link
           a href="/projects/kimuraglamping" Kimura Glamping
-      .column.has-text-left
+      .column.is-half-mobile.has-text-left
         h1.subtitle.footer__subtitle.has-mb-60 = t 'company', scope: i18n_scope
         .footer__link
           a href="#" Blog
@@ -61,7 +61,7 @@ footer
           a href="#" Torn Trader
         .footer__link
           a href="/projects/bhpartykuly" BHP Artykuly
-      .column.has-text-left
+      .column.is-fullwidth-mobile.has-text-left.has-text-centered-mobile
         h1.subtitle.footer__subtitle.has-mb-60 = t 'contact', scope: i18n_scope
         .footer__link
           a href="mailto:hello@jalappeno.pl" hello@jalappeno.pl
@@ -69,16 +69,18 @@ footer
           a href="tel:+48693896717" +48 693 896 717
         .footer__link Jalappeno Sp. z o.o.
     .columns.has-text-centered
-      .column.is-flex-desktop.is-justify-content-flex-end
-        a.ml-5 href="https://github.com/"
+      .column.is-flex-desktop.is-justify-content-flex-start
+        = image_tag "logo", alt: "jalappeno logo"
+      .column.is-flex-desktop.is-justify-content-flex-end.is-justify-content-center-mobile.no-footer-margin-mobile
+        a.m-2 href="https://github.com/"
           = image_tag 'github_icon.svg'
-        a.ml-5 href="https://www.behance.net/"
+        a.m-2 href="https://www.behance.net/"
           = image_tag 'behance_icon.svg'
-        a.ml-5 href="https://pl.linkedin.com/"
+        a.m-2 href="https://pl.linkedin.com/"
           = image_tag 'linkedin_icon.svg'
-        a.ml-5 href="https://www.facebook.com/"
+        a.m-2 href="https://www.facebook.com/"
           = image_tag 'facebook_icon.svg'
-        a.ml-5 href="https://www.instagram.com/"
+        a.m-2 href="https://www.instagram.com/"
           = image_tag 'instagram_icon.svg'
-        a.ml-5 href="https://dribbble.com/"
+        a.m-2 href="https://dribbble.com/"
           = image_tag 'dribble_icon.svg'

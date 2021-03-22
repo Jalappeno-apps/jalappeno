@@ -1,2 +1,17 @@
-html, body {
+.singular {
+  transition: 500ms;
+
+  &:hover {
+    transition: 500ms;
+    transform: scale(1.1);
+    border: 1px solid map-get($jalappeno, 'green-140') !important;
+    cursor: asset-url('cursor-hover.svg'), auto;
+  }
+}
+
+a:hover{
+  transition: 500ms;
+  text-decoration: none;
+  cursor: asset-url('cursor-hover.svg'), auto;
+  background-color: initial;
 }
