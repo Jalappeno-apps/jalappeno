@@ -20,22 +20,26 @@
 
 html {
   height: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 body {
   min-height: 100%;
   display: flex;
+  padding-top: 50px;
   flex-direction: column;
+  background: $primarybackground;
+  font-family: $text-display;
+  overflow-x: none;
+}
+
+.navbar {
+  padding: 20px;
 }
 
 .has-sticky-footer {
   flex: 1;
-}
-
-body {
-  background: $primarybackground;
-  font-family: $text-display;
-  overflow-x: none;
 }
 
 ::-moz-selection { /* Code for Firefox */
