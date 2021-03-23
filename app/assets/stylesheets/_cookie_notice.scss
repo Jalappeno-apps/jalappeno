@@ -1,6 +1,6 @@
 #cookie-container {
   user-select: none;
-  font-size: 12px;
+  font-size: 14px;
   position: fixed;
   bottom: 20px;
   padding: 12px;
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   .grid {
     width: 90%;
@@ -46,21 +47,31 @@
       opacity: 0.5;
     }
   }
+
+  .pixels {
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacitY: 0.5;
+  }
 }
 
 @keyframes fade-out {
   0% {
     opacity: 1;
-    transform: translateY(0);
   }
 
-  50%{
+  40%, 60% {
     opacity: 0.75;
-    transform: translateY(40%);
+    bottom: 0;
+    transform: translateY(0);
   }
 
   100% {
     opacity: 0;
+    bottom: 0;
     transform: translateY(100%);
   }
 }
