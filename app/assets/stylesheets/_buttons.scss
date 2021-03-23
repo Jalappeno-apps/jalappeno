@@ -62,14 +62,11 @@
 }
 
 .button-disabled {
-  background-color: #aaa !important;
-  color: #fafafa;
-  border-radius: 15px;
-  cursor: not-allowed;
-
-  &:hover {
-    color: #fafafa;
-    background-color: #aaa !important;
+  &, &:active, &:focus, &:active {
+    background-color: #E0E0E0 !important;
+    color: #fff;
+    border-radius: 15px;
+    border: none;
     cursor: not-allowed;
   }
 }

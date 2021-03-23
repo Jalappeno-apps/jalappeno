@@ -6,7 +6,7 @@
                 br
                 | your new business ideas
                 br
-                span.is-green-100  - it's free
+                span.is-green-100.font-weight-600 - it's free
             p.is-black = "As CEO of software company, I'd love to meet your needs and show you how you can get more sales,  save time and provide better customer service with our solutions. Pick up the most comfortable way for you to reach out to me"
         .column.is-5.contact
             = image_tag 'daiji-rounded-big.png'
@@ -19,7 +19,7 @@
                         br
                         | your new business ideas
                         br
-                        span.is-green-100  - it's free
+                        span.is-green-100.font-weight-600  - it's free
                 .column.is-flex.is-align-items-center
                     figure.image
                         = image_tag 'daiji.png', class: 'person is-rounded', style: "border-radius: 290486px; border-width: 10px;"
@@ -28,36 +28,39 @@
     .columns
         .column
             .landing__reach-us.pt-6.pb-6.appear-from-up
-                = image_tag "phone-icon.svg", class: "mt-3"
-                p.is-green-100.has-text-weight-semibold.mt-3 = "call me now!"
+                = image_tag "phone-icon.svg", class: "mt-3 mb-4"
+                p.is-green-100.has-text-weight-semibold.mt-3.mb-2.font-24px = "call me now!"
+                p.is-bold +48 693-896-717
                 a.button.is-primary.button-shadowed.mt-3 href="tel:+48693896717"
                     = "call now"
         .column
             .landing__reach-us.pt-6.pb-6.appear-from-up
-                = image_tag "email-icon.svg", class: "mt-3"
-                p.is-green-100.has-text-weight-semibold.mt-3 = "leave a message"
+                = image_tag "email-icon.svg", class: "mt-3 mb-4"
+                p.is-green-100.has-text-weight-semibold.mt-3.mb-2.font-24px = "leave a message"
+                span.mb-5
                 a.button.is-primary.button-shadowed.mt-3 href="#contact-us"
                     = "write e-mail"
         .column
             .landing__reach-us.pt-6.pb-6.appear-from-up
-                = image_tag "calendar-icon.svg", class: "mt-3"
-                p.is-green-100.has-text-weight-semibold.mt-3 = "book a meeting"
+                = image_tag "calendar-icon.svg", class: "mt-3 mb-4"
+                p.is-green-100.has-text-weight-semibold.mt-3.mb-2.font-24px = "book a meeting"
+                span.mb-5
                 a.button.is-primary.button-shadowed.mt-3 href="#book-meeting"
                     = "choose a date"
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mt-6
         | why would you
-        span.is-green-100  contact
+        span.is-green-100  contact&nbsp;
         | us?
     .columns.pt-6.mt-6.appear-from-up
         .column.is-flex.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
             = image_tag "consultancy.png"
-            span.is-block.is-black.mt-3.has-text-weight-medium = "You will get fresh ideas and consultancy for free."
+            span.is-block.is-black.mt-3.font-weight-600 = "You will get fresh ideas and consultancy for free."
         .column.is.flex.is-flex-direction-column.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
             = image_tag "partner.png"
-            span.is-block.is-black.mt-3.has-text-weight-medium = "You look for reliable partner and we actually care about your success.."
+            span.is-block.is-black.mt-3.font-weight-600 = "You look for reliable partner and we actually care about your success.."
         .column.is-flex.is-flex-direction-column.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
             = image_tag "meeting.png"
-            span.is-block.is-black.mt-3.has-text-weight-medium = "You will be delighted by the way we run meeting.."
+            span.is-block.is-black.mt-3.font-weight-600 = "You will be delighted by the way we run meeting.."
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
         | our team is waiting for
         span.is-green-100  you
@@ -206,20 +209,20 @@
             input.mb-3.input[type="email" placeholder="Email"]
             input.mb-3.input[type="tel" placeholder="Phone"]
             textarea.mb-3.textarea[placeholder="Message"]
-            label.checkbox
+            label.checkbox.mt-5
               input[type="checkbox"]
               |  I need
               span.is-green-80.is-bold
                 | NDA
               |  first
-            label.checkbox
+            label.checkbox.mt-4
               input[type="checkbox" class="link-button" button-id="button-submit"]
               |  I agree to the processing of personal data provided according to our &nbsp;
               a style="cursor: pointer;display:inline-block" href="/privacy-policy" target="_blank" rel="noopener"
                 span.is-green-80.is-bold
                     | Privacy Policy
             .right-align.mt-5
-                button#button-submit.button.button-disabled toggle-class="is-primary button-shadowed" Submit
+                button#button-submit.button.button-disabled toggle-class="is-primary button-shadowed" style="padding-left:48px;padding-right:48px" Send
 
 .landing__footer
     .is-flex.is-justify-content-center.landing__footer__container
