@@ -15,7 +15,8 @@
             padding: 10px !important;
         }
         img {
-            width: 75%;
+            width: Min(75%, 300px);
+
             @include mobile {
                 width: 25%;
             }

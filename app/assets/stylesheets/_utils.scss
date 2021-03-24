@@ -255,3 +255,9 @@
     justify-content: center !important;
   }
 }
+
+.right-align {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

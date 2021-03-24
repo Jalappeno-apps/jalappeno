@@ -1,12 +1,12 @@
-.container.container--landing.pt-6.mt-2
-    .columns.mb-6.is-hidden-mobile
+.container.container--landing.pt-6.mt-2.has-sticky-footer
+    .columns.mb-5rem.is-hidden-mobile
         .column.is-7
             h1.is-size-3.has-text-left.is-black.has-text-weight-medium.mt-6.mb-6
                 | let's talk about
                 br
                 | your new business ideas
                 br
-                span.is-green-100  - it's free
+                span.is-green-100.font-weight-600 - it's free
             p.is-black = "As CEO of software company, I'd love to meet your needs and show you how you can get more sales,  save time and provide better customer service with our solutions. Pick up the most comfortable way for you to reach out to me"
         .column.is-5.contact
             = image_tag 'daiji-rounded-big.png'
@@ -19,7 +19,7 @@
                         br
                         | your new business ideas
                         br
-                        span.is-green-100  - it's free
+                        span.is-green-100.font-weight-600  - it's free
                 .column.is-flex.is-align-items-center
                     figure.image
                         = image_tag 'daiji.png', class: 'person is-rounded', style: "border-radius: 290486px; border-width: 10px;"
@@ -28,36 +28,39 @@
     .columns
         .column
             .landing__reach-us.pt-6.pb-6.appear-from-up
-                = image_tag "phone-icon.svg", class: "mt-3"
-                p.is-green-100.has-text-weight-semibold.mt-3 = "call me now!"
+                = image_tag "phone-icon.svg", class: "mt-3 mb-4 icon-30px"
+                p.is-green-100.has-text-weight-semibold.mt-3.mb-2.font-24px = "call me now!"
+                p.is-bold +48 693-896-717
                 a.button.is-primary.button-shadowed.mt-3 href="tel:+48693896717"
                     = "call now"
         .column
             .landing__reach-us.pt-6.pb-6.appear-from-up
-                = image_tag "email-icon.svg", class: "mt-3"
-                p.is-green-100.has-text-weight-semibold.mt-3 = "leave a message"
-                a.button.is-primary.button-shadowed.mt-3 href="mailto:hello@jalappeno.pl"
+                = image_tag "email-icon.svg", class: "mt-3 mb-4 icon-30px"
+                p.is-green-100.has-text-weight-semibold.mt-3.mb-2.font-24px = "leave a message"
+                span.mb-5
+                a.button.is-primary.button-shadowed.mt-3 href="#contact-us"
                     = "write e-mail"
         .column
             .landing__reach-us.pt-6.pb-6.appear-from-up
-                = image_tag "calendar-icon.svg", class: "mt-3"
-                p.is-green-100.has-text-weight-semibold.mt-3 = "book a meeting"
+                = image_tag "calendar-icon.svg", class: "mt-3 mb-4 icon-30px"
+                p.is-green-100.has-text-weight-semibold.mt-3.mb-2.font-24px = "book a meeting"
+                span.mb-5
                 a.button.is-primary.button-shadowed.mt-3 href="#book-meeting"
                     = "choose a date"
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mt-6
         | why would you
-        span.is-green-100  contact
+        span.is-green-100  contact&nbsp;
         | us?
     .columns.pt-6.mt-6.appear-from-up
         .column.is-flex.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
             = image_tag "consultancy.png"
-            span.is-block.is-black.mt-3.has-text-weight-medium = "You will get fresh ideas and consultancy for free."
+            span.is-block.is-black.mt-3.font-weight-600 = "You will get fresh ideas and consultancy for free."
         .column.is.flex.is-flex-direction-column.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
             = image_tag "partner.png"
-            span.is-block.is-black.mt-3.has-text-weight-medium = "You look for reliable partner and we actually care about your success.."
+            span.is-block.is-black.mt-3.font-weight-600 = "You look for reliable partner and we actually care about your success.."
         .column.is-flex.is-flex-direction-column.is-flex-direction-column.is-align-items-center.is-justify-content-center.has-text-centered
             = image_tag "meeting.png"
-            span.is-block.is-black.mt-3.has-text-weight-medium = "You will be delighted by the way we run meeting.."
+            span.is-block.is-black.mt-3.font-weight-600 = "You will be delighted by the way we run meeting.."
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
         | our team is waiting for
         span.is-green-100  you
@@ -131,81 +134,89 @@
 
     h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mt-6
         | check what others say about
-        span.is-green-100   us
-    .appear-from-up
-        .columns.mt-6
-            .column.has-text-centered
-                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-                figure.image.margin-auto.mt-6
-                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-                p.is-black.has-text-weight-semibold.mt-3 = "Katarzyna Cedzyńska, Project Manager"
-                p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
-            .column.has-text-centered
-                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-                figure.image.margin-auto.mt-6
-                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-                p.is-black.has-text-weight-semibold.mt-3 = "Martyna Kubicka, Operation Director"
-                p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
-        .columns.mt-6
-            .column.has-text-centered
-                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-                figure.image.margin-auto.mt-6
-                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-                p.is-black.has-text-weight-semibold.mt-3 = "Paweł Tyburski, Co-founder"
-                p.is-green-100.has-text-weight-semibold = "HempChamp"
-            .column.has-text-centered
-                i.is-black = "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis diam, nulla in amet, amet molestie in tincidunt. A, ac fermentum senectus elementum egestas arcu donec.”"
-                figure.image.margin-auto.mt-6
-                    = image_tag 'founder.png', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
-                p.is-black.has-text-weight-semibold.mt-3 = "Karolina Czerwonka, Co-founder"
-                p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
+    span.is-green-100   us
+        .appear-from-up
+            .columns.mt-6
+                .column.has-text-centered
+                    i.is-black.font-weight-600.font-18px
+                        | &#x201C;After a bad experience with unreliable e-commerce developers, I was incredibly skeptical when it comes to IT cooperation.
+                            Daiji is different. He didn’t sell me the solution that was the most profitable for him. Instead, we started small from MVP
+                            product on Shopify. He gave me real value in honest consultancy.&#x201D;
+                    figure.image.margin-auto.mt-6
+                        = image_tag 'customers/Group 42.jpg', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
+                    p.is-black.has-text-weight-semibold.mt-3 = "Emil Iman, CEO"
+                    p.is-green-100.has-text-weight-semibold = "Prestige Optique"
+            .columns.mt-6
+                .column.has-text-centered
+                    i.is-black.font-weight-600.font-18px
+                        | &#x201C;Jalappeno delivered fresh and very user-centered UX redesign with custom development service.
+                            Besides the website’s project itself, they provide us maintenance, growth, and graphic service continuously
+                            for almost 2 years. Great partners for long term goal.&#x201D;
+                    figure.image.margin-auto.mt-6
+                        = image_tag 'customers/Group 41.jpg', class: 'person is-rounded landing__project__founder', style: "width: 90px;"
+                    p.is-black.has-text-weight-semibold.mt-3 = "Katarzyna Cedzyńska, COO"
+                    p.is-green-100.has-text-weight-semibold = "Smart Life Clinic"
 
     #book-meeting
-      h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
-          span.is-green-100 book a
-          |  meeting
-      .has-text-centered.appear-from-up.mb-6
-            .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:530px"
+        h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
+            span.is-green-100 book a
+                |  meeting
 
-    h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.has-mt-96.mb-6
-        | contact
-        span.is-green-100   us
-    .appear-from-up
-      .columns.contact.mb-6
-        .column
-          .columns
-            .column.is-flex.is-justify-content-center
-              figure.image
-                = image_tag 'daiji.png', class: 'person is-rounded'
-            .column
-              h2.is-size-4.mb-4
-                | Daiji Kimura
-              p.mb-1
-                | CEO & Product Owner
-              p.mb-1
-                | +48 693-896-717
-              p.mb-1
-                daiji.kimura@jalappeno.pl
-          .columns
-            .column
-              p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
-        .column
-          input.mb-3.input[type="text" placeholder="Full name"]
-          input.mb-3.input[type="email" placeholder="Email"]
-          input.mb-3.input[type="tel" placeholder="Phone"]
-          textarea.mb-3.textarea[placeholder="Message"]
-          label.checkbox
-            input[type="checkbox"]
-            |  I need
-            span.is-green-80.is-bold
-              | NDA
-            |  first
-          label.checkbox
-            input[type="checkbox"]
-            |  I agree to the processing of personal data provided according to our
-            a style="cursor: pointer; display: block;" href="/privacy-policy" target="_blank"
+        / Shown in tablet
+        .is-hidden-mobile.is-hidden-desktop
+            .has-text-centered.appear-from-up.mb-6
+                .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:560px"
+        / Shown in mobile
+        .is-hidden-tablet
+            .has-text-centered.appear-from-up.mb-6
+                .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:660px"
+        / For desktops and wide screens
+        .is-hidden-touch
+            .has-text-centered.appear-from-up
+                .calendly-inline-widget.auto-height data-url="https://calendly.com/daiji-kimura" style="min-width:320px;height:650px"
+
+    #contact-us
+      h1.is-size-3.has-text-centered.is-black.has-text-weight-semibold.mb-6
+          | contact
+          span.is-green-100   us
+      .appear-from-up
+        .columns.contact.mb-6
+          .column
+            .columns
+              .column.is-flex.is-justify-content-center
+                figure.image
+                  = image_tag 'daiji.png', class: 'person is-rounded'
+              .column
+                h2.is-size-4.mb-4
+                  | Daiji Kimura
+                p.mb-1
+                  | CEO & Product Owner
+                p.mb-1
+                  | +48 693-896-717
+                p.mb-1
+                  daiji.kimura@jalappeno.pl
+            .columns
+              .column
+                p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
+          .column
+            input.mb-3.input[type="text" placeholder="Full name" class="required"]
+            input.mb-3.input[type="email" placeholder="Email" class="required"]
+            input.mb-3.input[type="tel" placeholder="Phone" class="required"]
+            textarea.mb-3.textarea[placeholder="Message" class="required"]
+            label.checkbox.mt-5
+              input[type="checkbox"]
+              |  I need
               span.is-green-80.is-bold
-                  | Privacy Policy
+                | NDA
+              |  first
+            label.checkbox.mt-4
+              input[type="checkbox" id="submitButton" button-id="button-submit"]
+              |  I agree to the processing of personal data provided according to our &nbsp;
+              a style="cursor: pointer;display:inline-block" href="/privacy-policy" target="_blank" rel="noopener"
+                span.is-green-80.is-bold
+                    | Privacy Policy
+            .right-align.mt-5
+                button#button-submit.button.button-disabled toggle-class="is-primary button-shadowed" style="padding-left:48px;padding-right:48px" Send
 
 .landing__footer
     .is-flex.is-justify-content-center.landing__footer__container

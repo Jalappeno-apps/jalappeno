@@ -1,0 +1,13 @@
+#cookie-container.appear-from-down
+  .grid
+    .left
+      = image_tag 'cookie', width: '30px', height: '30px'
+    .center
+      p
+        | We use cookies. By continuing to browse the site you are agreeing to our&nbsp;
+        = link_to 'Privacy Policy', privacy_policy_path, class: 'is-green-80 is-bold'
+    .right
+      #close-cookie
+        = image_tag 'cross', width: '12px', height: '12px'
+
+= javascript_pack_tag 'cookie_notice'

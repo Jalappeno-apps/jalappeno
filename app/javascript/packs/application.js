@@ -18,7 +18,7 @@ require("channels")
 document.addEventListener('turbolinks:load', function() {
   const nav = document.querySelector("nav")
 
-  window.onscroll = () =>  {
+  styleNavbar = function() {
     let top =   window.pageYOffset || document.documentElement.scrollTop
 
     if(top > 100) {
@@ -28,15 +28,18 @@ document.addEventListener('turbolinks:load', function() {
     }
   }
 
+  window.onscroll = () =>  styleNavbar()
+  styleNavbar()
+
   function observeComponents(direction) {
     for(let _i of document.querySelectorAll(`.appear-from-${direction}`)) {
-      let _delay = _i.getAttribute('slide-delay') || 125
+      let _delay = _i.getAttribute('slide-delay') || 250
 
       _i.observer = new IntersectionObserver(e => {
         if(e[0].isIntersecting) {
           if(!_i.observed) {
             _i.observed = true
-            _i.style.animation = `appear-${direction} 0.5s ease forwards ${_delay}ms`
+            _i.style.animation = `appear-${direction} 1s ease forwards ${_delay}ms`
             if(_i.observer) _i.observer.unobserve(_i)
           }
         }
@@ -50,4 +53,63 @@ document.addEventListener('turbolinks:load', function() {
   observeComponents('down')
   observeComponents('right')
   observeComponents('left')
+
+  // Toggle disabled submit button
+  const mandatoryFields = Array.from(document.getElementsByClassName('required'))
+  // console.log(mandatoryFields)
+
+  const submitButton = document.getElementById('submitButton')
+  const buttonId = submitButton.getAttribute('button-id')
+  const button = document.getElementById(buttonId)
+  const attributes = button.getAttribute('toggle-class').split(' ')
+
+
+  for (let i of mandatoryFields) {
+    i.addEventListener('input', function() {
+      console.log(this.value)
+
+      if (this.value.trim() !== '' && submitButton.checked) {
+        buttonEnabler()
+      } else if (this.value.trim() === '') {
+        buttonDisabler()
+      }
+    })
+  }
+
+  window.toggleSendButtonState =  function() {
+  }
+
+  const buttonEnabler = () => {
+    let enabled = true
+
+    for (let r of mandatoryFields) {
+      if (r.value.trim() === '') {
+        enabled = false
+        break
+      }
+    }
+
+    if(enabled) {
+      button.classList.remove('button-disabled')
+      button.classList.add(...attributes)
+    }
+  }
+
+  const buttonDisabler = () => {
+    button.classList.add('button-disabled')
+    button.classList.remove(...attributes)
+  }
+
+  toggleButton = e => {
+    if (button && e)
+      buttonEnabler(attributes)
+    else
+      buttonDisabler(attributes)
+  }
+
+  submitButton.onclick = function() {
+    toggleButton(this.checked)
+  }
+
+  toggleButton(submitButton.checked)
 })

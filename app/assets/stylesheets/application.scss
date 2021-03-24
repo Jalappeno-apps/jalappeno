@@ -12,15 +12,34 @@
 @import "./flexbox";
 @import "./cursor";
 @import "./footer";
+@import "./cookie_notice";
 
 @import "under_construction";
 @import "landing";
 @import "projects";
 
+html {
+  height: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 body {
+  min-height: 100%;
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
   background: $primarybackground;
   font-family: $text-display;
   overflow-x: none;
+}
+
+.navbar {
+  padding: 20px;
+}
+
+.has-sticky-footer {
+  flex: 1;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -260,7 +279,7 @@ body {
   position: relative;
   height: 300px;
   @extend .is-hidden-touch;
-  
+
   .frame {
     position: absolute;
   }
@@ -277,7 +296,7 @@ body {
 
 .columns--development {
   .column {
-    text-align: center; 
+    text-align: center;
     figure {
       width: 75%;
       margin: 0 auto;
@@ -285,7 +304,7 @@ body {
     @media screen and (max-width: 600px) {
       figure {
         width: 50%;
-      } 
+      }
     }
   }
 }
@@ -394,4 +413,25 @@ body {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.font-24px {
+  font-size: 24px;
+}
+
+.font-18px {
+  font-size: 18px;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.icon-30px {
+  width: 30px;
+  height: 30px;
+}
+
+.mb-5rem {
+  margin-bottom: 5rem !important;
 }
