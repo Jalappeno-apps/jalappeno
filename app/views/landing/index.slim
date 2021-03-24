@@ -198,24 +198,25 @@
               .column
                 p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
           .column
-            input.mb-3.input[type="text" placeholder="Full name" class="required"]
-            input.mb-3.input[type="email" placeholder="Email" class="required"]
-            input.mb-3.input[type="tel" placeholder="Phone" class="required"]
-            textarea.mb-3.textarea[placeholder="Message" class="required"]
-            label.checkbox.mt-5
-              input[type="checkbox"]
-              |  I need
-              span.is-green-80.is-bold
-                | NDA
-              |  first
-            label.checkbox.mt-4
-              input[type="checkbox" id="submitButton" button-id="button-submit"]
-              |  I agree to the processing of personal data provided according to our &nbsp;
-              a style="cursor: pointer;display:inline-block" href="/privacy-policy" target="_blank" rel="noopener"
-                span.is-green-80.is-bold
-                    | Privacy Policy
-            .right-align.mt-5
-                button#button-submit.button.button-disabled toggle-class="is-primary button-shadowed" style="padding-left:48px;padding-right:48px" Send
+            form id="my-form" action="https://formspree.io/f/mlearljy" method="POST"
+                input.mb-3.input[name="fullname" type="text" placeholder="Full name" class="required" required="" id="fullName"]
+                input.mb-3.input[name="email" type="email" placeholder="Email" class="required" required="" id="email"]
+                input.mb-3.input[name="phone" type="tel" pattern="^\+?[0-9]{8,14}$" placeholder="Phone" class="required" id="inputPhone" required="" minlength="8" maxlength="15"]
+                textarea.mb-3.textarea[name="message" placeholder="Message" class="required" required="" id="message"]
+                label.checkbox.mt-5
+                    input[name="NDA" type="checkbox"]
+                    |  I need&nbsp;
+                    span.is-green-80.is-bold
+                        | NDA
+                    |  first
+                label.checkbox.mt-4
+                    input[type="checkbox" id="submitButton" button-id="button-submit"]
+                    |  I agree to the processing of personal data provided according to our &nbsp;
+                    a style="cursor: pointer;display:inline-block" href="/privacy-policy" target="_blank" rel="noopener"
+                        span.is-green-80.is-bold
+                            | Privacy Policy
+                .right-align.mt-5
+                    button#button-submit.button.button-disabled toggle-class="is-primary button-shadowed" style="padding-left:48px;padding-right:48px" Send
 
 .landing__footer
     .is-flex.is-justify-content-center.landing__footer__container
@@ -230,4 +231,6 @@
         a.is-white style="cursor: pointer;" href="/terms-of-service" target="_blank"
             = "terms of service"
 
-script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""
+= javascript_pack_tag "phone_number_matcher"
+= javascript_pack_tag "toggle_submit_button"
