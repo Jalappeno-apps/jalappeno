@@ -62,11 +62,10 @@
 }
 
 .button-disabled {
-  &, &:active, &:focus, &:active {
+  &, &:active, &:focus, &:hover {
     background-color: #E0E0E0 !important;
     color: #fff;
     border-radius: 15px;
-    border: none;
     cursor: not-allowed;
   }
 }
