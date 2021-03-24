@@ -55,27 +55,61 @@ document.addEventListener('turbolinks:load', function() {
   observeComponents('left')
 
   // Toggle disabled submit button
-  for(let _i of document.querySelectorAll('.link-button')) {
-    let buttonId = _i.getAttribute('button-id')
-    let button = document.getElementById(buttonId)
+  const mandatoryFields = Array.from(document.getElementsByClassName('required'))
+  // console.log(mandatoryFields)
 
-    if (button) {
-      let attributes = button.getAttribute('toggle-class').split(' ')
+  const submitButton = document.getElementById('submitButton')
+  const buttonId = submitButton.getAttribute('button-id')
+  const button = document.getElementById(buttonId)
+  const attributes = button.getAttribute('toggle-class').split(' ')
 
-      let buttonToggler = () => {
-        if(_i.checked) {
-          button.classList.remove('button-disabled')
-          button.classList.add(...attributes)
-        } else {
-          button.classList.add('button-disabled')
-          button.classList.remove(...attributes)
-        }
+
+  for (let i of mandatoryFields) {
+    i.addEventListener('input', function() {
+      console.log(this.value)
+
+      if (this.value.trim() !== '' && submitButton.checked) {
+        buttonEnabler()
+      } else if (this.value.trim() === '') {
+        buttonDisabler()
       }
+    })
+  }
 
-      _i.onclick = () => buttonToggler()
-      buttonToggler()
+  window.toggleSendButtonState =  function() {
+  }
 
-    } // endof if (button) {...}
-  }   // endof for loop and disabled submit button
+  const buttonEnabler = () => {
+    let enabled = true
 
+    for (let r of mandatoryFields) {
+      if (r.value.trim() === '') {
+        enabled = false
+        break
+      }
+    }
+
+    if(enabled) {
+      button.classList.remove('button-disabled')
+      button.classList.add(...attributes)
+    }
+  }
+
+  const buttonDisabler = () => {
+    button.classList.add('button-disabled')
+    button.classList.remove(...attributes)
+  }
+
+  toggleButton = e => {
+    if (button && e)
+      buttonEnabler(attributes)
+    else
+      buttonDisabler(attributes)
+  }
+
+  submitButton.onclick = function() {
+    toggleButton(this.checked)
+  }
+
+  toggleButton(submitButton.checked)
 })

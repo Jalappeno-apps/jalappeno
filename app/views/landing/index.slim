@@ -199,10 +199,10 @@
               .column
                 p My biggest pleasure is to serve our customers, help them formulate and execute their wonderful ideas. With our three main values which are, <b>customer centricity, passion for innovations and long therm vision </b> - you can be sure, that we are <b> the right partners for your </b> exciting business journey. <br/><br/> I’d be happy to hear from you and help you with free consultancy or real development project!
           .column
-            input.mb-3.input[type="text" placeholder="Full name"]
-            input.mb-3.input[type="email" placeholder="Email"]
-            input.mb-3.input[type="tel" placeholder="Phone"]
-            textarea.mb-3.textarea[placeholder="Message"]
+            input.mb-3.input[type="text" placeholder="Full name" class="required"]
+            input.mb-3.input[type="email" placeholder="Email" class="required"]
+            input.mb-3.input[type="tel" placeholder="Phone" class="required"]
+            textarea.mb-3.textarea[placeholder="Message" class="required"]
             label.checkbox.mt-5
               input[type="checkbox"]
               |  I need
@@ -210,7 +210,7 @@
                 | NDA
               |  first
             label.checkbox.mt-4
-              input[type="checkbox" class="link-button" button-id="button-submit"]
+              input[type="checkbox" id="submitButton" button-id="button-submit"]
               |  I agree to the processing of personal data provided according to our &nbsp;
               a style="cursor: pointer;display:inline-block" href="/privacy-policy" target="_blank" rel="noopener"
                 span.is-green-80.is-bold
