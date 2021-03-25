@@ -16,6 +16,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 document.addEventListener('turbolinks:load', function() {
+  // #1 Toggle white navbar, and Shadow
   const nav = document.querySelector("nav")
 
   styleNavbar = function() {
@@ -30,7 +31,9 @@ document.addEventListener('turbolinks:load', function() {
 
   window.onscroll = () =>  styleNavbar()
   styleNavbar()
+  // #1 End of Toggle white navbar, and Shadow
 
+  // #2 IntersectionObserver
   function observeComponents(direction) {
     for(let _i of document.querySelectorAll(`.appear-from-${direction}`)) {
       let _delay = _i.getAttribute('slide-delay') || 250
@@ -54,62 +57,5 @@ document.addEventListener('turbolinks:load', function() {
   observeComponents('right')
   observeComponents('left')
 
-  // Toggle disabled submit button
-  const mandatoryFields = Array.from(document.getElementsByClassName('required'))
-  // console.log(mandatoryFields)
-
-  const submitButton = document.getElementById('submitButton')
-  const buttonId = submitButton.getAttribute('button-id')
-  const button = document.getElementById(buttonId)
-  const attributes = button.getAttribute('toggle-class').split(' ')
-
-
-  for (let i of mandatoryFields) {
-    i.addEventListener('input', function() {
-      console.log(this.value)
-
-      if (this.value.trim() !== '' && submitButton.checked) {
-        buttonEnabler()
-      } else if (this.value.trim() === '') {
-        buttonDisabler()
-      }
-    })
-  }
-
-  window.toggleSendButtonState =  function() {
-  }
-
-  const buttonEnabler = () => {
-    let enabled = true
-
-    for (let r of mandatoryFields) {
-      if (r.value.trim() === '') {
-        enabled = false
-        break
-      }
-    }
-
-    if(enabled) {
-      button.classList.remove('button-disabled')
-      button.classList.add(...attributes)
-    }
-  }
-
-  const buttonDisabler = () => {
-    button.classList.add('button-disabled')
-    button.classList.remove(...attributes)
-  }
-
-  toggleButton = e => {
-    if (button && e)
-      buttonEnabler(attributes)
-    else
-      buttonDisabler(attributes)
-  }
-
-  submitButton.onclick = function() {
-    toggleButton(this.checked)
-  }
-
-  toggleButton(submitButton.checked)
+  // #2 End of IntersectionObserver
 })
