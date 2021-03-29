@@ -1,0 +1,72 @@
+<div id="loader" style="z-index: 10000; position: fixed;
+    background-color: #fff; height: 100%; width: 100%;
+    top: 0; left: 0; display: inline-flex; flex-direction: column;
+    align-items: center; justify-content: center;overflow:hidden">
+  <div id="loader-image" style="width: 14vmin; animation: fade-in-out 2s linear infinite">
+    <picture>
+      <source srcset="<%= image_url 'loader.webp' %>" type="image/webp">
+      <source srcset="<%= image_url 'loader.png' %>" type="image/png">
+      <%= image_tag 'loader.webp', style: "width: 14vmin" %>
+    </picture>
+  </div>
+
+  <div id="text-container" style="margin-top: 4.5vmin">
+    <span id="loader-text" style="font-size: 4vmin;min-height: 4vmin;display: inline;font-weight: 600">
+      Loading...
+    </span>
+    <span id="cursor" style="font-size: 4vmin;min-height: 4vmin;display: inline;">
+      |
+    </span>
+  </div>
+
+  <div id="arrowDown" style="width: 3vmin;position: absolute;bottom: 2vmin;animation: fade-in-out 1s ease infinite">
+    <%= image_tag 'arrow-down.svg', style: 'width: 3vmin' %>
+  </div>
+</div>
+
+<script>
+  const loaderContainer = document.getElementById('loader')
+  const loaderText = document.getElementById('loader-text')
+  const chars = loaderText.innerText.split('')
+  const cursor = document.getElementById('cursor')
+  const dismiss = document.getElementById('arrowDown')
+  const len = chars.length
+  const dismissTimeMS = 1000
+
+  let index = 0
+  let time = Date.now()
+
+  loaderText.innerText = ''
+
+  setInterval(function() {
+    if (index == len) {
+      if (loaderText.innerText === '') {
+        index = 0
+      } else {
+        if (Date.now() - time > 3000) {
+          loaderText.innerText = loaderText.innerText.split('').slice(0, -1).join('')
+          cursor.style.animation = 'none'
+        } else {
+          cursor.style.animation = 'blink 0.5s ease infinite'
+        }
+      }
+    } else {
+      loaderText.innerText += chars[index++]
+      time = Date.now()
+    }
+  }, 125)
+
+  dismissLoader = () => {
+    if (loaderContainer)
+      loaderContainer.style.animation = `hide ${dismissTimeMS}ms ease forwards`
+
+    setTimeout(() => document.body.removeChild(loaderContainer), dismissTimeMS + 100)
+  }
+
+  // document.addEventListener('DOMContentLoaded', () => {
+  //   dismissLoader()
+  // })
+
+  dismiss.onclick = () => { dismissLoader() }
+  window.onload = () => { dismissLoader() }
+</script>

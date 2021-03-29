@@ -12,11 +12,28 @@
     <%= favicon_link_tag 'favicons/favicon-32.png', sizes: '48x48' %>
     <%= favicon_link_tag 'favicons/favicon-16.png', sizes: '64x64' %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="preload" as="style" href="<%= stylesheet_url 'loader' %>">
+    <%= stylesheet_link_tag 'loader', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Load application.css in background while the loader animates -->
+    <link rel="preload" as="style" href="<%= stylesheet_url 'application' %>">
+    <script>
+      let link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.type = 'text/css'
+      link.href = "<%= stylesheet_url 'application' %>"
+
+      link.setAttribute('media', 'all')
+      link.setAttribute('data-turbolinks-track', 'reload')
+
+      document.head.appendChild(link)
+    </script>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'layouts/loader' %>
     <%= render 'layouts/cookie_notice' %>
     <%= render 'layouts/navbar_landing' %>
     <%= yield %>
